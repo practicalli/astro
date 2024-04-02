@@ -1,34 +1,32 @@
-# AstroNvim Template
+# Practicalli AstroNvim User Config
 
-**NOTE:** This is for AstroNvim v4+
+**NOTE:** This is for AstroNvim v4+ and will not work with earlier versions.
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+Clojure development and more with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
 
-#### Make a backup of your current nvim and shared folder
+Clone the repository (optionally creating your own fork)
 
 ```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+git clone git@github.com:practicalli/astronvim-user-config
 ```
 
-#### Create a new user repository from this template
+> Or clone where in a preferred directory and create an operating system symbolic link from .config/astronvim-user-config
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
 
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
+Create a shell alias to run the new configuration, e.g. in shell-aliases, .bashrc or .zshrc
 
-#### Clone the repository
+```config
+alias astro4="NVIM_APPNAME=astronvim4 nvim"
+```
+
+Load the alias into the current shell (or open a new shell)
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+source shell-aliases
 ```
 
-#### Start Neovim
+Run astro4 and wait for the plugins to update
 
-```shell
-nvim
-```
+
