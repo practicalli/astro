@@ -9,10 +9,10 @@ Clojure development and more with [AstroNvim](https://github.com/AstroNvim/Astro
 Clone the repository (optionally creating your own fork)
 
 ```shell
-git clone git@github.com:practicalli/astronvim-user-config
+git clone git@github.com:practicalli/astronvim-user-config $HOME/.config/astronvim4
 ```
 
-> Or clone where in a preferred directory and create an operating system symbolic link from .config/astronvim-user-config
+> Or clone where in a preferred directory and create an operating system symbolic link from .config/astronvim4
 
 
 Create a shell alias to run the new configuration, e.g. in shell-aliases, .bashrc or .zshrc
