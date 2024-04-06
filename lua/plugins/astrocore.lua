@@ -70,6 +70,13 @@ return {
         ["<leader>bt<tab>"] = { "<cmd>tabprevious<cr>", desc = "Previous tab" },
         -- ["<leader>bD"] = { "<cmd>Bdelete<cr>", desc = "Delete buffer" },
 
+        -- Find Menu
+        -- browse via directory structure, create and modify paths
+        ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "Explorer" },
+
+        -- Projects
+        ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()

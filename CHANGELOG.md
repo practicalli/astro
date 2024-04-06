@@ -11,5 +11,6 @@
 - community: add everforest theme and set as default
 - community: ccc-nvim color picker and highlighter
 - mappings: additional buffer key mappings
+- mappings: additional telescope key mappings, project & file browser plugin
 
 ## Changed

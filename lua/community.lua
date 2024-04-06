@@ -24,4 +24,11 @@ return {
   -- Treesitter: clojure , Lsp: clojure-lsp, Lint/format:
   { import = "astrocommunity.pack.clojure" },
   -- ----------------------------------------------
+
+  -- ----------------------------------------------
+  -- Project
+
+  -- switch between projects
+  { import = "astrocommunity.project.project-nvim" },
+  -- ----------------------------------------------
 }
