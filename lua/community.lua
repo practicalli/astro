@@ -24,6 +24,36 @@ return {
   -- ----------------------------------------------
 
   -- ----------------------------------------------
+  -- Editor support
+  -- Rainbow parens
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
+  -- Regular Expressions explained
+  { import = "astrocommunity.editing-support.nvim-regexplainer" },
+
+  -- Multiple Cusors
+  -- `gm` VM_Leader set in astrocore plugin
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
+
+  -- Distraction free editing
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      -- override default configuration
+      -- https://github.com/folke/zen-mode.nvim#%EF%B8%8F-configuration
+      plugins = {
+        options = {
+          enabled = true,
+        },
+        -- Kitty Terminal
+        kitty = {
+          enabled = true,
+          font = "+4", -- font size increment
+        },
+      },
+    },
+  },
+  -- ----------------------------------------------
 
   -- ----------------------------------------------
   -- Packs
