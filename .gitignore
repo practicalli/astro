@@ -1,0 +1,36 @@
+# ------------------------
+# Git Ignore file patterns
+# 
+# Ignore all except patterns starting with !
+# Add comments on separate lines, not same line as pattern
+# ------------------------
+
+# ------------------------
+# Ignore everthing in root directory
+/*
+# ------------------------
+
+# ------------------------
+# Common
+!CHANGELOG.md
+!README.md
+!LICENSE
+# ------------------------
+
+# ------------------------
+# AstroNvim 
+!lua/
+!snippets/
+!init.lua
+!neovim.yml
+!selene.toml
+!.neoconf.json
+!.stylua.toml
+# ------------------------
+
+# ------------------------
+# Include Git & CI workflow
+!.gitattributes
+!.gitignore
+!.github/
+# ------------------------
