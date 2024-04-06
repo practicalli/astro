@@ -12,5 +12,7 @@
 - community: ccc-nvim color picker and highlighter
 - mappings: additional buffer key mappings
 - mappings: additional telescope key mappings, project & file browser plugin
+- mappings: additional telescope key mappings & file browser plugin
+- community: nvim-surround motion plugin to support surrounding text
 
 ## Changed
