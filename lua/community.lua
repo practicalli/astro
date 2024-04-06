@@ -10,6 +10,10 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
 
+  -- ----------------------------------------------
+  -- themes and color
+  { import = "astrocommunity.colorscheme.everforest" },
+  -- ----------------------------------------------
 
   -- ----------------------------------------------
   -- Packs
