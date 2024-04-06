@@ -13,6 +13,10 @@ return {
   -- ----------------------------------------------
   -- themes and color
   { import = "astrocommunity.colorscheme.everforest" },
+  -- color picker and highlighter
+  { import = "astrocommunity.color.ccc-nvim" },
+  -- ----------------------------------------------
+
   -- ----------------------------------------------
 
   -- ----------------------------------------------
