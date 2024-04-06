@@ -57,6 +57,19 @@ return {
         --   desc = "Previous buffer",
         -- },
 
+        -- ------------------------
+        -- Practicalli Mappings
+        -- Toggle last open buffer
+        ["<leader><tab>"] = { "<cmd>b#<cr>", desc = "Last tab" },
+
+        -- mappings seen under group name "Buffer"
+        ["<leader>b"] = { name = "Buffers" },
+        ["<leader>bt"] = { name = "Tabs" },
+        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+        ["<leader>btn"] = { "<cmd>tabNext<cr>", desc = "Next tab" },
+        ["<leader>bt<tab>"] = { "<cmd>tabprevious<cr>", desc = "Previous tab" },
+        -- ["<leader>bD"] = { "<cmd>Bdelete<cr>", desc = "Delete buffer" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()

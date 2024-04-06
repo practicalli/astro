@@ -10,5 +10,6 @@
 - plugin: astrocore enable spell & wrap options, set guifont for neovide
 - community: add everforest theme and set as default
 - community: ccc-nvim color picker and highlighter
+- mappings: additional buffer key mappings
 
 ## Changed
