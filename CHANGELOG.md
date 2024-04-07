@@ -17,5 +17,6 @@
 - community: rainbow-delimiters regexexplainer visual-multi editor support plugins
 - community: spectre search and replace plugin
 - community: neogit interactive git client & key mapping overrides
+- mapping: set VM_leader for visual-multi plugin for multiple cursors
 
 ## Changed
