@@ -27,3 +27,4 @@
 - mapping: add `Z z` to enable Zen mode distraction free editing
 
 ## Changed
+- readme: expand on description and use
