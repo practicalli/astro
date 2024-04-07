@@ -18,5 +18,6 @@
 - community: spectre search and replace plugin
 - community: neogit interactive git client & key mapping overrides
 - mapping: set VM_leader for visual-multi plugin for multiple cursors
+- community: noice UI replacement for messages, popups & command line
 
 ## Changed
