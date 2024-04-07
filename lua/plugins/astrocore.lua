@@ -81,6 +81,9 @@ return {
         -- Projects
         ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
 
+        -- Editing
+        ["zZ"] = { "<cmd>ZenMode<cr>", desc = " Zen mode" },
+
         -- Git Menu
         -- Menu mappings
         ["<leader>gh"] = false, -- disable Reset Git Hunk mapping, used for Octo in plugins/github.lua

@@ -24,5 +24,6 @@
 - plugin: practicalli `fd` binding for `ESC` and startup banner
 - plugin: example plugin file
 - plugin: Octo github issues and pull requests
+- mapping: add `Z z` to enable Zen mode distraction free editing
 
 ## Changed
