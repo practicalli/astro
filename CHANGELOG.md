@@ -22,5 +22,6 @@
 - mapping: add `SPC W` save as key binding prompting for file name
 - snippets: luasnip plugin and json format snippets
 - practicalli: `fd` binding for `ESC` and startup banner
+- plugin: example plugin file
 
 ## Changed
