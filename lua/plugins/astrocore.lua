@@ -63,6 +63,9 @@ return {
         -- Toggle last open buffer
         ["<leader><tab>"] = { "<cmd>b#<cr>", desc = "Last tab" },
 
+        -- Save prompting for file name
+        ["<leader>W"] = { ":write ", desc = "Save as file" },
+
         -- mappings seen under group name "Buffer"
         ["<leader>b"] = { name = "Buffers" },
         ["<leader>bt"] = { name = "Tabs" },

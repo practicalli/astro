@@ -19,5 +19,6 @@
 - community: neogit interactive git client & key mapping overrides
 - mapping: set VM_leader for visual-multi plugin for multiple cursors
 - community: noice UI replacement for messages, popups & command line
+- mapping: add `SPC W` save as key binding prompting for file name
 
 ## Changed
