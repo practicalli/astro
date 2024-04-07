@@ -1,0 +1,148 @@
+{
+  "mkdocs admonition warning": {
+    "prefix": "mkdocs-admonition-warning-draft",
+    "body": [
+      "!!! WARNING \"Initial draft - feedback welcome\""
+    ],
+    "description": "MkDocs Admonition Warning Draft"
+  },
+  "mkdocs button tag": {
+    "prefix": "mkdocs-button",
+    "body": [
+      "{.md-button} ${0}"
+    ],
+    "description": "MkDocs Button tag"
+  },
+  "mkdocs button target tag": {
+    "prefix": "mkdocs-button-target-tag",
+    "body": [
+      "{target=_blank .md-button} ${0}"
+    ],
+    "description": "MkDocs Button target blank tag"
+  },
+  "mkdocs button form": {
+    "prefix": "mkdocs-button-form",
+    "body": [
+      "[${1:link text}](${2:URL}){target=_blank .md-button} ${0}"
+    ],
+    "description": "MkDocs Button form"
+  },
+  "mkdocs link target blank tag": {
+    "prefix": "mkdocs-link-target-blank-tag",
+    "body": [
+      "{target=_blank} ${0}"
+    ],
+    "description": "MkDocs Link target blank tag"
+  },
+  "mkdocs link form": {
+    "prefix": "mkdocs-link-form",
+    "body": [
+      "[${1:link-text}](${2:URL}){target=_blank .md-button} ${0}"
+    ],
+    "description": "MkDocs Link form"
+  },
+  "mkdocs youtube embed": {
+    "prefix": "mkdocs-youtube-embed",
+    "body": [
+      "<p style=\"text-align:center\">\n  <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/${1:url-code}\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n</p> ${0}"
+    ],
+    "description": "MkDocs YouTube Embed"
+  },
+  "mkdocs icon book": {
+    "prefix": "mkdocs-icon-book",
+    "body": [
+      ":fontawesome-solid-book-open:${0}"
+    ],
+    "description": "MkDocs link book icon"
+  },
+  "mkdocs icon github": {
+    "prefix": "mkdocs-icon-github",
+    "body": [
+      ":fontawesome-brands-github:${0}"
+    ],
+    "description": "MkDocs link github icon"
+  },
+  "mkdocs icon globe": {
+    "prefix": "mkdocs-icon-globe",
+    "body": [
+      ":globe_with_meridians:${0}"
+    ],
+    "description": "MkDocs link globe icon"
+  },
+  "mkdocs icon mastodon": {
+    "prefix": "mkdocs-icon-mastodon",
+    "body": [
+      ":fontawesome-brands-mastodon:${0}"
+    ],
+    "description": "MkDocs link mastodon icon"
+  },
+  "mkdocs icon youtube": {
+    "prefix": "mkdocs-icon-youtube",
+    "body": [
+      ":fontawesome-brands-youtube:${0}"
+    ],
+    "description": "MkDocs link youtube icon"
+  },
+  "mkdocs image github base url": {
+    "prefix": "mkdocs-image-github-base-url",
+    "body": [
+      "https://raw.githubusercontent.com/practicalli/graphic-design/live/${0}"
+    ],
+    "description": "MkDocs image GitHub base URL"
+  },
+  "mkdocs image form": {
+    "prefix": "mkdocs-image-form",
+    "body": [
+      "![${1:alternative-text}](${2:url}#only-dark#{3}){align=left${4} loading=lazy style=\"height:150px;width:150px\"}${0}"
+    ],
+    "description": "MkDocs Image form"
+  },
+  "mkdocs image GitHub form": {
+    "prefix": "mkdocs-image-github-form",
+    "body": [
+      "![${1:alternative text}](https://raw.githubusercontent.com/practicalli/graphic-design/live/${2:URL}#only-dark${3}){align=left${4} loading=lazy style=\"height:150px;width:150px\"}"
+    ],
+    "description": "MkDocs Image GitHub form"
+  },
+  "post header": {
+    "prefix": "post-header",
+    "body": [
+      "---
+title: 
+date: 2024-01-
+authors:
+  - practicalli
+categories:
+  - practicalli
+tags:
+  - clojure
+---
+
+**Thoughts for the week**
+
+
+<!-- more -->
+
+
+---
+Thank you.
+
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
+
+[:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
+[:fontawesome-brands-twitter: @practical_li](https://twitter.com/practcial_li){target=_blank .md-button}
+"
+    ],
+    "description": "post-header"
+  },
+  "mkdocs key form": {
+    "prefix": "mkdocs-key-form",
+    "body": [
+      "++${0}++"
+    ],
+    "description": "MkDocs Key form"
+  }
+}
