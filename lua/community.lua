@@ -66,5 +66,9 @@ return {
 
   -- switch between projects
   { import = "astrocommunity.project.project-nvim" },
+
+  -- Search and replace across projects
+  { import = "astrocommunity.project.nvim-spectre" },
+  -- ----------------------------------------------
   -- ----------------------------------------------
 }

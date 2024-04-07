@@ -15,5 +15,6 @@
 - mappings: additional telescope key mappings & file browser plugin
 - community: nvim-surround motion plugin to support surrounding text
 - community: rainbow-delimiters regexexplainer visual-multi editor support plugins
+- community: spectre search and replace plugin
 
 ## Changed
