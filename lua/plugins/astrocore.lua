@@ -77,6 +77,11 @@ return {
         -- Projects
         ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
 
+        -- Git Menu
+        -- Menu mappings
+        ["<leader>gH"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
+        -- ["<leader>gn"] = { name = " Neogit" }, -- Neogit menu with alternate logo
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()

@@ -70,5 +70,31 @@ return {
   -- Search and replace across projects
   { import = "astrocommunity.project.nvim-spectre" },
   -- ----------------------------------------------
+
+  -- ----------------------------------------------
+  -- Source Control
+  -- Neogit interactive git client
+  { import = "astrocommunity.git.neogit" },
+  -- overrides: add diffview and key mappings
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
+    },
+    opts = {
+      disable_commit_confirmation = true,
+      -- disable_builtin_notifications = false,
+      use_magit_keybindings = true,
+      integrations = {
+        diffview = true,
+      },
+    },
+    keys = {
+      -- Neogit status - overrides stage hunk astronvim mapping
+      { "<leader>gs", "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
+    },
+  },
+  -- ----------------------------------------------
+
   -- ----------------------------------------------
 }

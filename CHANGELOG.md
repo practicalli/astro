@@ -16,5 +16,6 @@
 - community: nvim-surround motion plugin to support surrounding text
 - community: rainbow-delimiters regexexplainer visual-multi editor support plugins
 - community: spectre search and replace plugin
+- community: neogit interactive git client & key mapping overrides
 
 ## Changed
