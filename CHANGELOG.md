@@ -25,6 +25,7 @@
 - plugin: example plugin file
 - plugin: Octo github issues and pull requests
 - mapping: add `Z z` to enable Zen mode distraction free editing
+- clojure: conjure, paredit, parinfer, parpar & nvim-treesitter-sexp plugins
 
 ## Changed
 - readme: expand on description and use
