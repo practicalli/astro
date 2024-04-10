@@ -41,6 +41,11 @@ Run `astro4` and wait for the plugins to update
 astro4
 ```
 
+## Configuration
+
+`lua/plugins/example-config.lua` shows how to modify and extend the AstroNvim configuration.  Existing Plugin configurations can be overridden or added to.  New plugins can be added, often in their own file (to make them easier to be optional).
+
+
 ## Sponsor Practicalli
 
 [![Sponsor Practicalli via GitHub](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-johnny/)
