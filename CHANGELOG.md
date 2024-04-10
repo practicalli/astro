@@ -27,6 +27,7 @@
 - mapping: add `Z z` to enable Zen mode distraction free editing
 - clojure: conjure, paredit, parinfer, parpar & nvim-treesitter-sexp plugins
 - neo-tree: override examples, show hidden in alternate style
+- plantuml: key mapping to call out to plantuml jar or binary
 
 ## Changed
 - readme: expand on description and use
