@@ -1,7 +1,7 @@
 -- ------------------------------------------
--- Purpose
+-- Example AstroNvim Plugin Configuration
 --
--- Override or add snippet related plugins & configuration here
+-- Examples showing how to add plugins and configuration
 -- ------------------------------------------
 
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
