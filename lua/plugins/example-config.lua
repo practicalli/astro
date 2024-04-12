@@ -7,8 +7,7 @@
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Local variables
--- Language filetypes for plugins
-local plantuml_filetypes = { "*.iuml", "*.plantuml", "*.pu", "*.puml", "*.wsd", "clojure", "fennel" }
+-- local variable_name = { "common", "values" }
 
 ---@type LazySpec
 return {
