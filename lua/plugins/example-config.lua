@@ -21,9 +21,9 @@ return {
       opts = {
         options = {
           -- configure general options: vim.opt.<key>
-        },
-        g = {
-          -- configure global vim variables: vim.g
+          g = {
+            -- configure global vim variables: vim.g
+          },
         },
         mappings = {
           n = {
@@ -48,9 +48,9 @@ return {
     opts = {
       options = {
         -- configure general options: vim.opt.<key>
-      },
-      g = {
-        -- configure global vim variables: vim.g
+        g = {
+          -- configure global vim variables: vim.g
+        },
       },
       mappings = {
         n = {
