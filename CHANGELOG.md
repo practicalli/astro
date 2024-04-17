@@ -30,6 +30,7 @@
 - plantuml: key mapping to call out to plantuml jar or binary
 - example-config: add new plugins & override existing plugin config 
 - clojure: which-key mappings for nvim-treesitter-sexp structural editing
+- practicalli: move neovim options and key mappings from astrocore.lua
 
 ## Changed
 - readme: expand on description and use

@@ -29,16 +29,13 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
-        spell = true, -- sets vim.opt.spell
+        spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-        wrap = true, -- sets vim.opt.wrap
-        guifont = "Fira Code:h16", -- neovide font family & size
+        wrap = false, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
-        -- This can be found in the `lua/lazy_setup.lua` file
-        VM_leader = "gm", -- Visual Multi Leader (multiple cursors - user plugin)
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -49,46 +46,6 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs with `H` and `L`
-        -- L = {
-        --   function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-        --   desc = "Next buffer",
-        -- },
-        -- H = {
-        --   function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-        --   desc = "Previous buffer",
-        -- },
-
-        -- ------------------------
-        -- Practicalli Mappings
-        -- Toggle last open buffer
-        ["<leader><tab>"] = { "<cmd>b#<cr>", desc = "Last tab" },
-
-        -- Save prompting for file name
-        ["<leader>W"] = { ":write ", desc = "Save as file" },
-
-        -- mappings seen under group name "Buffer"
-        ["<leader>b"] = { name = "Buffers" },
-        ["<leader>bt"] = { name = "Tabs" },
-        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-        ["<leader>btn"] = { "<cmd>tabNext<cr>", desc = "Next tab" },
-        ["<leader>bt<tab>"] = { "<cmd>tabprevious<cr>", desc = "Previous tab" },
-        -- ["<leader>bD"] = { "<cmd>Bdelete<cr>", desc = "Delete buffer" },
-
-        -- Find Menu
-        -- browse via directory structure, create and modify paths
-        ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "Explorer" },
-
-        -- Projects
-        ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
-
-        -- Editing
-        ["zZ"] = { "<cmd>ZenMode<cr>", desc = " Zen mode" },
-
-        -- Git Menu
-        -- Menu mappings
-        ["<leader>gh"] = false, -- disable Reset Git Hunk mapping, used for Octo in plugins/github.lua
-        ["<leader>gH"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
-        -- ["<leader>gn"] = { name = " Neogit" }, -- Neogit menu with alternate logo
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
