@@ -20,7 +20,7 @@ In summary, Clone the repository (optionally creating your own fork)
 git clone git@github.com:practicalli/astronvim-user-config $HOME/.config/astronvim4
 ```
 
-> Or clone where in a preferred directory and create an operating system symbolic link from .config/astronvim4
+> Or clone to $HOME/.config/nvim if all existing neovim configuration files have been removed, including `share` and `cache` directories.  This approach does not require use of `NVIM_APPNAME`
 
 
 Create a shell alias to run the new configuration, e.g. in `shell-aliases`, `.bashrc` or `.zshrc`
