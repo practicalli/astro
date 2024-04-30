@@ -31,6 +31,7 @@
 - example-config: add new plugins & override existing plugin config 
 - clojure: which-key mappings for nvim-treesitter-sexp structural editing
 - practicalli: move neovim options and key mappings from astrocore.lua
+- practicalli: set everforest theme, remove from astroui.lua
 
 ## Changed
 - readme: expand on description and use

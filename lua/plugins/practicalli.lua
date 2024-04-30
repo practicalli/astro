@@ -36,6 +36,16 @@ return {
     },
   },
 
+  {
+    -- AstroUI provides the basis for configuring the AstroNvim User Interface
+    -- Configuration documentation can be found with `:h astroui`
+    "AstroNvim/astroui",
+    ---@type AstroUIOpts
+    opts = {
+      colorscheme = "everforest",
+    },
+  },
+
   -- ------------------------
   -- Practicalli Key Mappings
   {
