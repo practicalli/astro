@@ -33,6 +33,7 @@
 - practicalli: move neovim options and key mappings from astrocore.lua
 - practicalli: set everforest theme, remove from astroui.lua
 - community: local fork to test clojure pack changes
+- community: import clojure pack, add practicalli config overrides
 
 ## Changed
 - readme: expand on description and use
