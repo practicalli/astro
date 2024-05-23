@@ -34,6 +34,7 @@
 - practicalli: set everforest theme, remove from astroui.lua
 - community: local fork to test clojure pack changes
 - community: import clojure pack, add practicalli config overrides
+- github: Octo plugin with <leader>gh keymaps
 
 ## Changed
 - readme: expand on description and use

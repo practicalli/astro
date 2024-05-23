@@ -8,79 +8,88 @@
 
 -- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
-local octo_leader = "<leader>gh"
-
 ---@type LazySpec
 return {
-
-  -- Octo for GitHub Issues & Pull Request
   {
     "pwntester/octo.nvim",
-    opts = {
-      -- add common aliases for remotes used by Practicalli
-      default_remote = { "practicalli", "practicalli-johnny", "upstream", "origin" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+      { "AstroNvim/astroui", opts = { icons = { Octo = "" } } },
+      {
+        "AstroNvim/astrocore",
+        opts = function(_, opts)
+          local maps = opts.mappings
+          local prefix = "<Leader>gh"
+          maps.n[prefix] = { desc = require("astroui").get_icon("Octo", 1, true) .. "Octo" }
+          maps.n[prefix .. "a"] = { desc = "Assignee/Reviewer" }
+          maps.n[prefix .. "aa"] = { "<Cmd>Octo assignee add<CR>", desc = "Assign a user" }
+          maps.n[prefix .. "ap"] = { "<Cmd>Octo reviewer add<CR>", desc = "Assign a PR reviewer" }
+          maps.n[prefix .. "ar"] = { "<Cmd>Octo assignee remove<CR>", desc = "Remove a user" }
+          maps.n[prefix .. "c"] = { desc = "Comments" }
+          maps.n[prefix .. "ca"] = { "<Cmd>Octo comment add<CR>", desc = "Add a new comment" }
+          maps.n[prefix .. "cd"] = { "<Cmd>Octo comment delete<CR>", desc = "Delete a comment" }
+          maps.n[prefix .. "e"] = { desc = "Reaction" }
+          maps.n[prefix .. "e1"] = { "<Cmd>Octo reaction thumbs_up<CR>", desc = "Add 👍 reaction" }
+          maps.n[prefix .. "e2"] = { "<Cmd>Octo reaction thumbs_down<CR>", desc = "Add 👎 reaction" }
+          maps.n[prefix .. "e3"] = { "<Cmd>Octo reaction eyes<CR>", desc = "Add 👀 reaction" }
+          maps.n[prefix .. "e4"] = { "<Cmd>Octo reaction laugh<CR>", desc = "Add 😄 reaction" }
+          maps.n[prefix .. "e5"] = { "<Cmd>Octo reaction confused<CR>", desc = "Add 😕 reaction" }
+          maps.n[prefix .. "e6"] = { "<Cmd>Octo reaction rocket<CR>", desc = "Add 🚀 reaction" }
+          maps.n[prefix .. "e7"] = { "<Cmd>Octo reaction heart<CR>", desc = "Add ❤️ reaction" }
+          maps.n[prefix .. "e8"] = { "<Cmd>Octo reaction party<CR>", desc = "Add 🎉 reaction" }
+          maps.n[prefix .. "i"] = { desc = "Issues" }
+          maps.n[prefix .. "ic"] = { "<Cmd>Octo issue close<CR>", desc = "Close current issue" }
+          maps.n[prefix .. "il"] = { "<Cmd>Octo issue list<CR>", desc = "List open issues" }
+          maps.n[prefix .. "io"] = { "<Cmd>Octo issue browser<CR>", desc = "Open current issue in browser" }
+          maps.n[prefix .. "ir"] = { "<Cmd>Octo issue reopen<CR>", desc = "Reopen current issue" }
+          maps.n[prefix .. "iu"] = { "<Cmd>Octo issue url<CR>", desc = "Copies URL of current issue" }
+          maps.n[prefix .. "l"] = { desc = "Label" }
+          maps.n[prefix .. "la"] = { "<Cmd>Octo label add<CR>", desc = "Assign a label" }
+          maps.n[prefix .. "lc"] = { "<Cmd>Octo label create<CR>", desc = "Create a label" }
+          maps.n[prefix .. "lr"] = { "<Cmd>Octo label remove<CR>", desc = "Remove a label" }
+          maps.n[prefix .. "p"] = { desc = "Pull requests" }
+          maps.n[prefix .. "pc"] = { "<Cmd>Octo pr close<CR>", desc = "Close current PR" }
+          maps.n[prefix .. "pd"] = { "<Cmd>Octo pr diff<CR>", desc = "Show PR diff" }
+          maps.n[prefix .. "pl"] = { "<Cmd>Octo pr commits<CR>", desc = "List changed files in PR" }
+          maps.n[prefix .. "pm"] = { desc = "Merge current PR" }
+          maps.n[prefix .. "pmd"] = { "<Cmd>Octo pr merge delete<CR>", desc = "Delete merge PR" }
+          maps.n[prefix .. "pmm"] = { "<Cmd>Octo pr merge commit<CR>", desc = "Merge commit PR" }
+          maps.n[prefix .. "pmr"] = { "<Cmd>Octo pr merge rebase<CR>", desc = "Rebase merge PR" }
+          maps.n[prefix .. "pms"] = { "<Cmd>Octo pr merge squash<CR>", desc = "Squash merge PR" }
+          maps.n[prefix .. "pn"] = { "<Cmd>Octo pr create<CR>", desc = "Create PR for current branch" }
+          maps.n[prefix .. "po"] = { "<Cmd>Octo pr browser<CR>", desc = "Open current PR in browser" }
+          maps.n[prefix .. "pp"] = { "<Cmd>Octo pr checkout<CR>", desc = "Checkout PR" }
+          maps.n[prefix .. "pr"] = { "<Cmd>Octo pr ready<CR>", desc = "Mark draft as ready for review" }
+          maps.n[prefix .. "ps"] = { "<Cmd>Octo pr list<CR>", desc = "List open PRs" }
+          maps.n[prefix .. "pt"] = { "<Cmd>Octo pr commits<CR>", desc = "List PR commits" }
+          maps.n[prefix .. "pu"] = { "<Cmd>Octo pr url<CR>", desc = "Copies URL of current PR" }
+          maps.n[prefix .. "r"] = { desc = "Repo" }
+          maps.n[prefix .. "rf"] = { "<Cmd>Octo repo fork<CR>", desc = "Fork repo" }
+          maps.n[prefix .. "rl"] = { "<Cmd>Octo repo list<CR>", desc = "List repo user stats" }
+          maps.n[prefix .. "ro"] = { "<Cmd>Octo repo open<CR>", desc = "Open current repo in browser" }
+          maps.n[prefix .. "ru"] = { "<Cmd>Octo repo url<CR>", desc = "Copies URL of current repo" }
+          maps.n[prefix .. "s"] = { desc = "Review" }
+          maps.n[prefix .. "sc"] = { "<Cmd>Octo review close<CR>", desc = "Return to PR" }
+          maps.n[prefix .. "sc"] = { "<Cmd>Octo review comments<CR>", desc = "View pending comments" }
+          maps.n[prefix .. "sd"] = { "<Cmd>Octo review discard<CR>", desc = "Delete pending review" }
+          maps.n[prefix .. "sf"] = { "<Cmd>Octo review submit<CR>", desc = "Submit review" }
+          maps.n[prefix .. "sp"] = { "<Cmd>Octo review commit<CR>", desc = "Select commit to review" }
+          maps.n[prefix .. "sr"] = { "<Cmd>Octo review resume<CR>", desc = "Resume review" }
+          maps.n[prefix .. "ss"] = { "<Cmd>Octo review start<CR>", desc = "Start review" }
+          maps.n[prefix .. "t"] = { desc = "Threads" }
+          maps.n[prefix .. "ta"] = { "<Cmd>Octo thread resolve<CR>", desc = "Mark thread as resolved" }
+          maps.n[prefix .. "td"] = { "<Cmd>Octo thread unresolve<CR>", desc = "Mark thread as unresolved" }
+          maps.n[prefix .. "x"] = { "<Cmd>Octo actions<CR>", desc = "Run an action" }
+        end,
+      },
     },
-    keys = {
-      { octo_leader, desc = " GitHub" }, -- Neogit menu also defined in mappings.lua
-      { octo_leader .. "c", desc = "Comments" },
-      { octo_leader .. "ca", "<cmd>Octo comment add<CR>", desc = "Add a new comment" },
-      { octo_leader .. "cd", "<cmd>Octo comment delete<CR>", desc = "Delete a comment" },
-      { octo_leader .. "t", desc = "Threads" },
-      { octo_leader .. "ta", "<cmd>Octo thread resolve<CR>", desc = "Mark thread as resolved" },
-      { octo_leader .. "td", "<cmd>Octo thread unresolve<CR>", desc = "Mark thread as unresolved" },
-      { octo_leader .. "i", desc = "Issues" },
-      { octo_leader .. "ic", "<cmd>Octo issue close<CR>", desc = "Close current issue" },
-      { octo_leader .. "ir", "<cmd>Octo issue reopen<CR>", desc = "Reopen current issue" },
-      { octo_leader .. "il", "<cmd>Octo issue list<CR>", desc = "List open issues" },
-      { octo_leader .. "iu", "<cmd>Octo issue url<CR>", desc = "Copies URL of current issue" },
-      { octo_leader .. "io", "<cmd>Octo issue browser<CR>", desc = "Open current issue in browser" },
-      { octo_leader .. "p", desc = "Pull requests" },
-      { octo_leader .. "pp", "<cmd>Octo pr checkout<CR>", desc = "Checkout PR" },
-      { octo_leader .. "pm", desc = "Merge current PR" },
-      { octo_leader .. "pmm", "<cmd>Octo pr merge commit<CR>", desc = "Merge commit PR" },
-      { octo_leader .. "pms", "<cmd>Octo pr merge squash<CR>", desc = "Squash merge PR" },
-      { octo_leader .. "pmd", "<cmd>Octo pr merge delete<CR>", desc = "Delete merge PR" },
-      { octo_leader .. "pmr", "<cmd>Octo pr merge rebase<CR>", desc = "Rebase merge PR" },
-      { octo_leader .. "pc", "<cmd>Octo pr close<CR>", desc = "Close current PR" },
-      { octo_leader .. "pn", "<cmd>Octo pr create<CR>", desc = "Create PR for current branch" },
-      { octo_leader .. "pd", "<cmd>Octo pr diff<CR>", desc = "Show PR diff" },
-      { octo_leader .. "ps", "<cmd>Octo pr list<CR>", desc = "List open PRs" },
-      { octo_leader .. "pr", "<cmd>Octo pr ready<CR>", desc = "Mark draft as ready for review" },
-      { octo_leader .. "po", "<cmd>Octo pr browser<CR>", desc = "Open current PR in browser" },
-      { octo_leader .. "pu", "<cmd>Octo pr url<CR>", desc = "Copies URL of current PR" },
-      { octo_leader .. "pt", "<cmd>Octo pr commits<CR>", desc = "List PR commits" },
-      { octo_leader .. "pl", "<cmd>Octo pr commits<CR>", desc = "List changed files in PR" },
-      { octo_leader .. "r", desc = "Repo" },
-      { octo_leader .. "rl", "<cmd>Octo repo list<CR>", desc = "List repo user stats" },
-      { octo_leader .. "rf", "<cmd>Octo repo fork<CR>", desc = "Fork repo" },
-      { octo_leader .. "ro", "<cmd>Octo repo open<CR>", desc = "Open current repo in browser" },
-      { octo_leader .. "ru", "<cmd>Octo repo url<CR>", desc = "Copies URL of current repo" },
-      { octo_leader .. "a", desc = "Assignee/Reviewer" },
-      { octo_leader .. "aa", "<cmd> Octo assignee add<CR>", desc = "Assign a user" },
-      { octo_leader .. "ar", "<cmd> Octo assignee remove<CR>", desc = "Remove a user" },
-      { octo_leader .. "ap", "<cmd> Octo reviewer add<CR>", desc = "Assign a PR reviewer" },
-      { octo_leader .. "l", desc = "Label" },
-      { octo_leader .. "la", "<cmd> Octo label add<CR>", desc = "Assign a label" },
-      { octo_leader .. "lr", "<cmd> Octo label remove<CR>", desc = "Remove a label" },
-      { octo_leader .. "lc", "<cmd> Octo label create<CR>", desc = "Create a label" },
-      { octo_leader .. "e", desc = "Reactions" },
-      { octo_leader .. "e1", "<cmd>Octo reaction thumbs_up<CR>", desc = "Add 👍 reaction" },
-      { octo_leader .. "e2", "<cmd>Octo reaction thumbs_down<CR>", desc = "Add 👎 reaction" },
-      { octo_leader .. "e3", "<cmd>Octo reaction eyes<CR>", desc = "Add 👀 reaction" },
-      { octo_leader .. "e4", "<cmd>Octo reaction laugh<CR>", desc = "Add 😄 reaction" },
-      { octo_leader .. "e5", "<cmd>Octo reaction confused<CR>", desc = "Add 😕 reaction" },
-      { octo_leader .. "e6", "<cmd>Octo reaction rocket<CR>", desc = "Add 🚀 reaction" },
-      { octo_leader .. "e7", "<cmd>Octo reaction heart<CR>", desc = "Add ❤️ reaction" },
-      { octo_leader .. "e8", "<cmd>Octo reaction party<CR>", desc = "Add 🎉 reaction" },
-      { octo_leader .. "x", "<cmd>Octo actions<CR>", desc = "Run an action" },
-      { octo_leader .. "s", desc = "Review" },
-      { octo_leader .. "ss", "<cmd> Octo review start<CR>", desc = "Start review" },
-      { octo_leader .. "sf", "<cmd> Octo review submit<CR>", desc = "Submit review" },
-      { octo_leader .. "sr", "<cmd> Octo review resume<CR>", desc = "Submit resume" },
-      { octo_leader .. "sd", "<cmd> Octo review discard<CR>", desc = "Delete pending review" },
-      { octo_leader .. "sc", "<cmd> Octo review comments<CR>", desc = "View pending comments" },
-      { octo_leader .. "sp", "<cmd> Octo review commit<CR>", desc = "Select commit to review" },
-      { octo_leader .. "sc", "<cmd> Octo review close<CR>", desc = "Return to PR" },
+    cmd = { "Octo" },
+    opts = {
+      use_diagnostic_signs = true,
+      default_remote = { "practicalli", "practicalli-johnny", "upstream", "origin" },
+      mappings = {},
     },
   },
 }

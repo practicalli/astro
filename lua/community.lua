@@ -120,6 +120,8 @@ return {
       { "<leader>gs", "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
     },
   },
+  -- GitHub Pull Requests and Issues
+  -- Octo plugin configured in `lua/plugins/github.lua`
   -- ----------------------------------------------
 
   -- ----------------------------------------------
