@@ -7,9 +7,15 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
-  -- import/override with your plugins folder
 
+  -- Test changes in local fork of astrocommunity in ~/project/astrocommunity
+  -- { "AstroNvim/astrocommunity", dev = true },
+  -- Or specify path to Astrocommunity fork
+  -- { dir = "~/projects/community/neovim/astrocommunity" },
+
+  -- Include Lua language pack
+  { import = "astrocommunity.pack.lua" },
+  --
   -- ----------------------------------------------
   -- themes and color
   { import = "astrocommunity.colorscheme.everforest" },

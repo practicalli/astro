@@ -32,6 +32,7 @@
 - clojure: which-key mappings for nvim-treesitter-sexp structural editing
 - practicalli: move neovim options and key mappings from astrocore.lua
 - practicalli: set everforest theme, remove from astroui.lua
+- community: local fork to test clojure pack changes
 
 ## Changed
 - readme: expand on description and use
