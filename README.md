@@ -11,22 +11,31 @@ This is a new project, so constructive feedback on plugin choice and configurati
 
 ## 🛠️ Installation
 
-- [Practicalli Neovim - Install](https://practical.li/neovim/install/) details install of Clojure and Neovim.
-- [Practicalli Neovim - Configuration](https://practical.li/neovim/configuration/astronvim/) details install AstroNvim and Practicalli AstroNvim Config
+- [Kitty Terminal](https://practical.li/engineering-playbook/command-line/kitty-terminal/)
+- [Neovim 0.10.x](https://github.com/neovim/neovim/releases/tag/v0.10.0)
+- [Practicalli Neovim Configuration](https://practical.li/neovim/configuration/astronvim/) details install AstroNvim and Practicalli AstroNvim Config
+- [Clojure install](https://practical.li/clojure/install/)
 
-In summary, Clone the repository (optionally creating your own fork)
+Clone the Practicalli AstroNvim User Config repository (optionally creating a fork first should customisation be required)
 
 ```shell
-git clone git@github.com:practicalli/astronvim-user-config $HOME/.config/astronvim4
+git clone git@github.com:practicalli/astronvim-user-config $HOME/.config/nvim
 ```
 
-> Or clone to $HOME/.config/nvim if all existing neovim configuration files have been removed, including `share` and `cache` directories.  This approach does not require use of `NVIM_APPNAME`
+Run `nvim` command and wait for all plugins to update
 
+```shell
+nvim
+```
 
-Create a shell alias to run the new configuration, e.g. in `shell-aliases`, `.bashrc` or `.zshrc`
+### Multiple Neovim configs
+
+Clone to `$HOME/.config/astronvim` if there is an existing neovim configuration and use the `NVIM_APPNAME=astronvim nvim` command to start Neovim with AstroNvim configuration
+
+Create a shell alias to run the new configuration, e.g. in `.bashrc` or `.zshrc` (or a `shell-aliases` file that eash shell rc file sources)
 
 ```config
-alias astro4="NVIM_APPNAME=astronvim4 nvim"
+alias astro="NVIM_APPNAME=astronvim nvim"
 ```
 
 Load the alias into the current shell (or open a new shell)
@@ -35,10 +44,10 @@ Load the alias into the current shell (or open a new shell)
 source shell-aliases
 ```
 
-Run `astro4` and wait for the plugins to update
+Run `astro` and wait for the plugins to update
 
 ```shell
-astro4
+astro
 ```
 
 ## Configuration
