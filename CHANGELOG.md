@@ -37,6 +37,7 @@
 - github: Octo plugin with <leader>gh keymaps
 - community: `lsp_doc_border = true` adds border to hover docs & signature help
 - readme: refactor install details & multiple config setup
+- neogit: disable_signs = true otherwise fold signs duplicated
 
 ## Changed
 - readme: expand on description and use

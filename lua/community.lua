@@ -110,6 +110,7 @@ return {
     opts = {
       disable_commit_confirmation = true,
       -- disable_builtin_notifications = false,
+      disable_signs = true, -- duplicate signs if enabled
       use_magit_keybindings = true,
       integrations = {
         diffview = true,
