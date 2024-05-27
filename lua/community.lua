@@ -70,8 +70,8 @@ return {
   -- ----------------------------------------------
   -- Project
 
-  -- switch between projects
-  { import = "astrocommunity.project.project-nvim" },
+  -- switch between projects (AstroNvim provides router)
+  -- { import = "astrocommunity.project.project-nvim" },
 
   -- Search and replace across projects
   { import = "astrocommunity.project.nvim-spectre" },

@@ -38,6 +38,7 @@
 - community: `lsp_doc_border = true` adds border to hover docs & signature help
 - readme: refactor install details & multiple config setup
 - neogit: disable_signs = true otherwise fold signs duplicated
+- community: disable project.nvim in favor of AstroNvim router
 
 ## Changed
 - readme: expand on description and use
