@@ -41,6 +41,7 @@
 - community: disable project.nvim in favor of AstroNvim router
 - github: Gists plugin and key maps
 - practicalli: conjure eval comment & hightlight options
+- community: neovide recipes for scaling functions & key mappings
 
 ## Changed
 - readme: expand on description and use
