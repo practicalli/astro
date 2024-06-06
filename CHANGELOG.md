@@ -40,6 +40,7 @@
 - neogit: disable_signs = true otherwise fold signs duplicated
 - community: disable project.nvim in favor of AstroNvim router
 - github: Gists plugin and key maps
+- practicalli: conjure eval comment & hightlight options
 
 ## Changed
 - readme: expand on description and use

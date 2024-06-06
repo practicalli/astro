@@ -70,6 +70,11 @@ return {
 
           -- Conjure plugin overrides
 
+          -- comment pattern for eval to comment command
+          ["conjure#eval#comment_prefix"] = ";; ",
+          -- Hightlight evaluated forms
+          ["conjure#highlight#enabled"] = true,
+
           -- show HUD REPL log at startup
           ["conjure#log#hud#enabled"] = false,
 
