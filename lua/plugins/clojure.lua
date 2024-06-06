@@ -4,6 +4,7 @@
 -- comment plugins not required
 --
 -- NOTE: disable AstroCommunity Clojure Pack in `community.lua`
+-- before using this configuration
 -- ------------------------------------------
 
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
