@@ -1,11 +1,15 @@
 -- ------------------------------------------
 -- Practicalli specific customisations
 --
--- Startup banner
--- `fd` as alternate `ESC` key mapping
+-- Startup dashboard banner
+-- `fd` as alternate `ESC` key mapping (better-escape.nvim)
+-- Everforest colorscheme
+-- Custom global options & key mpapings (via astrocore)
 -- ------------------------------------------
 
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- INFO: Create a `lua/plugins/your-name.lua` for significant changes
+
+-- if true then return {} end   INFO: Comment this line to deactivate configuration
 
 ---@type LazySpec
 return {
