@@ -65,26 +65,6 @@ return {
   -- Packs
   -- Treesitter: clojure , Lsp: clojure-lsp, Lint/format:
   { import = "astrocommunity.pack.clojure" },
-  {
-    "AstroNvim/astrocore",
-    opts = {
-      options = {
-        g = {
-          -- show HUD REPL log at startup
-          ["conjure#log#hud#enabled"] = false,
-
-          -- auto repl (babashka)
-          ["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false,
-          ["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true,
-          ["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil,
-          ["conjure#client#clojure#nrepl#eval#auto_require"] = false,
-
-          -- Test runner: "clojure", "clojuresCRipt", "kaocha"
-          ["conjure#client#clojure#nrepl#test#runner"] = "kaocha",
-        },
-      },
-    },
-  },
   -- ----------------------------------------------
 
   -- ----------------------------------------------

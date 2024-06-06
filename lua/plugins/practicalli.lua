@@ -47,7 +47,7 @@ return {
   },
 
   -- ------------------------
-  -- Practicalli Key Mappings
+  -- Practicalli Options and  Key Mappings
   {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
@@ -63,6 +63,20 @@ return {
           -- configure global vim variables: vim.g
           -- This can be found in the `lua/lazy_setup.lua` file
           VM_leader = "gm", -- Visual Multi Leader (multiple cursors - user plugin)
+
+          -- Conjure plugin overrides
+
+          -- show HUD REPL log at startup
+          ["conjure#log#hud#enabled"] = false,
+
+          -- auto repl (babashka)
+          ["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false,
+          ["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true,
+          ["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil,
+          ["conjure#client#clojure#nrepl#eval#auto_require"] = false,
+
+          -- Test runner: "clojure", "clojuresCRipt", "kaocha"
+          ["conjure#client#clojure#nrepl#test#runner"] = "kaocha",
         },
       },
       mappings = {
