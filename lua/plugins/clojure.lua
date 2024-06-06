@@ -1,10 +1,11 @@
 -- ------------------------------------------
--- Clojure Development support
--- plugins & configuration
--- comment plugins not required
+-- Clojure Development support - manual configuration
+--
+-- Example plugin configurations for a customised Clojure workflow
 --
 -- NOTE: disable AstroCommunity Clojure Pack in `community.lua`
 -- before using this configuration
+-- Comment plugins not required
 -- ------------------------------------------
 
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
@@ -71,141 +72,73 @@ return {
       },
     },
   },
+  {
+    -- BREAKING CHANGE: nvim-treesitter using kind-eq, replacing has-type
+    -- https://github.com/PaterJason/nvim-treesitter-sexp/issues/6
+    -- Replace with Practicalli fork with temporary fix
+    -- "PaterJason/nvim-treesitter-sexp",
+    "practicalli-johnny/nvim-treesitter-sexp-fork",
+    branch = "treesitter-has-type-to-kind-eq",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    ft = { "clojure", "fennel", "janet", "query" },
+    cmd = "TSSexp",
+    opts = {},
+  },
+
   -- Paredit paren wrangling
-  {
-    "julienvincent/nvim-paredit",
-    filetype = lisp_dialects,
-    dependencies = {
-      "AstroNvim/astrocore",
-      opts = {
-        options = {
-          g = {},
-        },
-        mappings = {
-          n = {
-            -- normal mode key bindings
-            -- setting a mapping to false will disable it
-            -- ["<esc>"] = false,
-          },
-          t = {
-            -- terminal? mode key bindings
-          },
-          v = {
-            -- visual mode key bindings
-          },
-        },
-      },
-    },
-  },
+  -- {
+  --   "julienvincent/nvim-paredit",
+  --   filetype = lisp_dialects,
+  --   dependencies = {
+  --     "AstroNvim/astrocore",
+  --     opts = {
+  --       options = {
+  --         g = {},
+  --       },
+  --       mappings = {
+  --         n = {
+  --           -- normal mode key bindings
+  --           -- setting a mapping to false will disable it
+  --           -- ["<esc>"] = false,
+  --         },
+  --         t = {
+  --           -- terminal? mode key bindings
+  --         },
+  --         v = {
+  --           -- visual mode key bindings
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
   -- Paredit & Parinfer together
-  {
-    "dundalek/parpar.nvim",
-    filetype = lisp_dialects,
-    dependencies = {
-      "AstroNvim/astrocore",
-      "gpanders/nvim-parinfer",
-      "julienvincent/nvim-paredit",
-      opts = {
-        options = {
-          g = {},
-        },
-        mappings = {
-          n = {
-            -- normal mode key bindings
-            -- setting a mapping to false will disable it
-            -- ["<esc>"] = false,
-          },
-          t = {
-            -- terminal? mode key bindings
-          },
-          v = {
-            -- visual mode key bindings
-          },
-        },
-      },
-    },
-  },
-  -- Treesitter structural editing
-  -- - package provides normal mode key mappings
-  -- - practicalli config adds which-key mappings
-  {
-    "PaterJason/nvim-treesitter-sexp",
-    filetype = lisp_dialects,
-    dependencies = {
-      "AstroNvim/astrocore",
-      opts = {
-        -- configuration:
-        -- https://github.com/PaterJason/nvim-treesitter-sexp#configuration
-        enabled = false,
-        --     -- Set to false to disable individual keymaps
-        set_cursor = true,
-        -- keymaps = {
-        -- Default key bindings - set to false to disable
-        --   commands = {
-        --     swap_prev_elem = "<e",
-        --     swap_next_elem = ">e",
-        --     swap_prev_form = "<f",
-        --     swap_next_form = ">f",
-        --     promote_elem = "<LocalLeader>O",
-        --     promote_form = "<LocalLeader>o",
-        --     splice = "<LocalLeader>@",
-        --     slurp_left = "<(",
-        --     slurp_right = ">)",
-        --     barf_left = ">(",
-        --     barf_right = "<)",
-        --     insert_head = "<I",
-        --     insert_tail = ">I",
-        --   },
-        --   motions = {
-        --     form_start = "(",
-        --     form_end = ")",
-        --     prev_elem = "[e",
-        --     next_elem = "]e",
-        --     prev_elem_end = "[E",
-        --     next_elem_end = "]E",
-        --     prev_top_level = "[[",
-        --     next_top_level = "]]",
-        --   },
-        --   textobjects = {
-        --     inner_elem = "ie",
-        --     outer_elem = "ae",
-        --     inner_form = "if",
-        --     outer_form = "af",
-        --     inner_top_level = "iF",
-        --     outer_top_level = "aF",
-        --   },
-        -- },
-        options = {
-          g = {},
-        },
-        mappings = {
-          n = {
-            -- Additional Which-key key bindings for nvim-treesitter-sexp
-            ["<leader>k"] = { name = "Structural Editing" },
-            ["<leader>kE"] = { "<cmd>TSSexp swap_prev_elem<cr>", desc = "Swap Previous Element" },
-            ["<leader>ke"] = { "<cmd>TSSexp swap_next_elem<cr>", desc = "Swap Previous Element" },
-            ["<leader>kF"] = { "<cmd>TSSexp swap_prev_form<cr>", desc = "Swap Previous Form" },
-            ["<leader>kf"] = { "<cmd>TSSexp swap_next_form<cr>", desc = "Swap Previous Form" },
-            ["<leader>kk"] = { "<cmd>TSSexp promote_elem<cr>", desc = "Promote Element" },
-            ["<leader>kr"] = { "<cmd>TSSexp promote_form<cr>", desc = "Promote Form" },
-            ["<leader>k@"] = { "<cmd>TSSexp splice<cr>", desc = "Splice" },
-            ["<leader>kS"] = { "<cmd>TSSexp slurp_left<cr>", desc = "Slurp Left" },
-            ["<leader>ks"] = { "<cmd>TSSexp slurp_right<cr>", desc = "Slurp Right" },
-            ["<leader>kB"] = { "<cmd>TSSexp barf_left<cr>", desc = "Barf Left" },
-            ["<leader>kb"] = { "<cmd>TSSexp barf_right<cr>", desc = "Barf Right" },
-            ["<leader>kI"] = { "<cmd>TSSexp barf_right<cr>", desc = "Insert Head" },
-            ["<leader>ki"] = { "<cmd>TSSexp barf_right<cr>", desc = "Insert Tail" },
-          },
-          t = {
-            -- terminal? mode key bindings
-          },
-          v = {
-            -- visual mode key bindings
-          },
-        },
-      },
-    },
-  },
+  -- {
+  --   "dundalek/parpar.nvim",
+  --   filetype = lisp_dialects,
+  --   dependencies = {
+  --     "AstroNvim/astrocore",
+  --     "gpanders/nvim-parinfer",
+  --     "julienvincent/nvim-paredit",
+  --     opts = {
+  --       options = {
+  --         g = {},
+  --       },
+  --       mappings = {
+  --         n = {
+  --           -- normal mode key bindings
+  --           -- setting a mapping to false will disable it
+  --           -- ["<esc>"] = false,
+  --         },
+  --         t = {
+  --           -- terminal? mode key bindings
+  --         },
+  --         v = {
+  --           -- visual mode key bindings
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
   -- REPL workflow with Conjure
   {
     "Olical/conjure",
@@ -214,29 +147,6 @@ return {
     dependencies = {
       "AstroNvim/astrocore",
       opts = {
-        autocmds = {
-          conjure_log_disable_lsp = {
-            {
-              event = "BufNewFile",
-              pattern = { "conjure-log-*" },
-              callback = function() vim.diagnostic.disable(0) end,
-              desc = "Conjure Log disable LSP diagnostics",
-            },
-            {
-              event = "FileType",
-              pattern = { "clojure" },
-              callback = function() vim.bo.commentstring = ";; %s" end,
-              desc = "Lisp style line comment",
-            },
-            -- ClojureDart Filetype works, but syntax highlight not working
-            -- {
-            --   event = { "BufNewFile", "BufRead", "FileType" },
-            --   pattern = { "*.cljd" },
-            --   callback = function() vim.filetype.add { "clojure" } end,
-            --   desc = "Set ClojureDart extension as Clojure filetype",
-            -- },
-          },
-        },
         options = {
           g = {
             -- Width of HUD as percentage of the editor width between 0.0 and 1.0. Default: `0.42`
@@ -251,7 +161,10 @@ return {
             -- Lines from top of file to check for `ns` form, to sett evaluation context Default: `24`
             -- `b:conjure#context` to override a specific buffer that isn't finding the context
             ["conjure#extract#context_header_lines"] = 100,
+            -- comment pattern for eval to comment command
             ["conjure#eval#comment_prefix"] = ";; ",
+            -- Hightlight evaluated forms
+            ["conjure#highlight#enabled"] = true,
             -- Start "auto-repl" process when nREPL connection not found, e.g. babashka. ;; Default: `true`
             ["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false,
             -- Hide auto-repl buffer when triggered. Default: `false`

@@ -45,3 +45,4 @@
 - readme: expand on description and use
 - practicalli: conjure global options for practicalli workflow
 - astrocore: reset file to original config from template
+- clojure: add nvim-treesitter-sexp and comment paredit plugins
