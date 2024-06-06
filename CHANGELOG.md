@@ -41,3 +41,4 @@
 
 ## Changed
 - readme: expand on description and use
+- practicalli: conjure global options for practicalli workflow
