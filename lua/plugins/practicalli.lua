@@ -115,9 +115,14 @@ return {
 
           -- Git Menu
           -- Menu mappings
+          -- ["<leader>gn"] = { name = " Neogit" }, -- Neogit menu with alternate logo
           ["<leader>gh"] = false, -- disable Reset Git Hunk mapping, used for Octo in plugins/github.lua
           ["<leader>gH"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
-          -- ["<leader>gn"] = { name = " Neogit" }, -- Neogit menu with alternate logo
+          -- Gits.nvim key maps
+          ["<leader>ghg"] = { name = "Gist" },
+          ["<leader>ghgr"] = { "<cmd>GistCreate<cr>", desc = "Gist Region" },
+          ["<leader>ghgg"] = { "<cmd>GistCreateFromFile<cr>", desc = "Gist File" },
+          ["<leader>ghgl"] = { "<cmd>GistsList<cr>", desc = "List Gists" },
         },
         t = {
           -- terminal? mode key bindings

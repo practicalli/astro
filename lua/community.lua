@@ -101,6 +101,10 @@ return {
       { "<leader>gs", "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
     },
   },
+  -- Manage GitHub Gists
+  -- Keymaps defined in `lua/plugins/practicalli.lua`
+  { import = "astrocommunity.git.gist-nvim" },
+
   -- GitHub Pull Requests and Issues
   -- Octo plugin configured in `lua/plugins/github.lua`
   -- ----------------------------------------------
