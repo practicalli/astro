@@ -5,28 +5,21 @@
 -- Clojure LSP
 -- Lua LSP
 
---!TODO: add conditional to only load config ig running on Termux
--- local not_termux = not (vim.env.OSTYPE ==  "linux-android")^"
+-- INFO: conditional to only load config ig running on Termux
 local termux = vim.env.OS_TERMUX
 if not termux then return {} end
-
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
--- Configuration documentation can be found with `:h astrolsp`
--- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
---       as this provides autocomplete and documentation while editing
 
 ---@type LazySpec
 return {
   -- Disable locally installed LSP language servers
   {
     "williamboman/mason-lspconfig.nvim",
-     opts = function(_, opts)
-       opts.ensure_installed = vim.tbl_filter(function(s) return s ~= "lua_ls" end, opts.ensure_installed)
-     end
+    opts = function(_, opts)
+      opts.ensure_installed = vim.tbl_filter(function(s) return s ~= "lua_ls" end, opts.ensure_installed)
+    end,
   },
 
+  -- INFO: Use local Clojure & Lua LSP servers
   {
     "AstroNvim/astrolsp",
     ---@type AstroLSPOpts
@@ -41,14 +34,15 @@ return {
       -- enable servers that you already have installed without mason
       servers = {
         -- "pyright"
-        'clojure_lsp',
-        'lua_ls',
+        "clojure_lsp",
+        "lua_ls",
       },
     },
   },
 
+  -- INFO: Pin Neogit for Neovim 0.9.x
   {
     "NeogitOrg/neogit",
-    tag = 'v0.0.1'
+    tag = "v0.0.1",
   },
 }
