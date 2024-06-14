@@ -7,8 +7,10 @@
 
 --!TODO: add conditional to only load config ig running on Termux
 -- local not_termux = not (vim.env.OSTYPE ==  "linux-android")^"
-local not_termux = (vim.env.OS_TERMUX == false)
-if not_termux then return {} end
+local termux = vim.env.OS_TERMUX
+if not termux then return {} end
+
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
