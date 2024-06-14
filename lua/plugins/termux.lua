@@ -19,21 +19,31 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 ---@type LazySpec
 return {
-  "AstroNvim/astrolsp",
-  ---@type AstroLSPOpts
-  opts = {
-    -- Configuration table of features provided by AstroLSP
-    features = {
-      autoformat = true, -- enable or disable auto formatting on start
-      codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
-      semantic_tokens = true, -- enable/disable semantic token highlighting
-    },
-    -- enable servers that you already have installed without mason
-    servers = {
-      -- "pyright"
-      'clojure_lsp',
-      'lua_ls',
+  -- Disable locally installed LSP language servers
+  {
+    "williamboman/mason-lspconfig.nvim",
+     opts = function(_, opts)
+       opts.ensure_installed = vim.tbl_filter(function(s) return s ~= "lua_ls" end, opts.ensure_installed)
+     end
+  },
+
+  {
+    "AstroNvim/astrolsp",
+    ---@type AstroLSPOpts
+    opts = {
+      -- Configuration table of features provided by AstroLSP
+      features = {
+        autoformat = true, -- enable or disable auto formatting on start
+        codelens = true, -- enable/disable codelens refresh on start
+        inlay_hints = false, -- enable/disable inlay hints on start
+        semantic_tokens = true, -- enable/disable semantic token highlighting
+      },
+      -- enable servers that you already have installed without mason
+      servers = {
+        -- "pyright"
+        'clojure_lsp',
+        'lua_ls',
+      },
     },
   },
 }

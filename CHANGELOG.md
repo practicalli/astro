@@ -43,6 +43,7 @@
 - practicalli: conjure eval comment & hightlight options
 - community: neovide recipes for scaling functions & key mappings
 - termux: use local lsp language servers when mason install not supported
+- termux: disable mason from installing the lua_ls language server
 
 ## Changed
 - readme: expand on description and use
