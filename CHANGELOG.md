@@ -44,6 +44,7 @@
 - community: neovide recipes for scaling functions & key mappings
 - termux: use local lsp language servers when mason install not supported
 - termux: disable mason from installing the lua_ls language server
+- termux: neogit v0.0.1 for nvim 0.9.x support
 
 ## Changed
 - readme: expand on description and use

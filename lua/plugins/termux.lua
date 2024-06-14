@@ -46,4 +46,9 @@ return {
       },
     },
   },
+
+  {
+    "NeogitOrg/neogit",
+    tag = 'v0.0.1'
+  },
 }
