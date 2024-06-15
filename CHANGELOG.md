@@ -49,6 +49,7 @@
 - practicalli: move to `user-practicalli.lua` to load config last
 - practicalli: add conditional using `PRACTICALLI_ASTRO` environment variable
 - termux: `clojure_lsp` server excluded from mason install
+- termux: comment support for neovim 0.9.x
 
 ## Changed
 - readme: expand on description and use

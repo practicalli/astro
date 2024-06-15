@@ -48,4 +48,8 @@ return {
     "NeogitOrg/neogit",
     tag = "v0.0.1",
   },
+
+  -- Commenting for Neovim 0.9.0
+  { "numToStr/Comment.nvim", enabled = true },
+  { "JoosepAlviste/nvim-ts-context-commentstring", enabled = true },
 }
