@@ -73,11 +73,7 @@ return {
     },
   },
   {
-    -- BREAKING CHANGE: nvim-treesitter using kind-eq, replacing has-type
-    -- https://github.com/PaterJason/nvim-treesitter-sexp/issues/6
-    -- Replace with Practicalli fork with temporary fix
-    -- "PaterJason/nvim-treesitter-sexp",
-    "practicalli-johnny/nvim-treesitter-sexp-fork",
+    "PaterJason/nvim-treesitter-sexp",
     branch = "treesitter-has-type-to-kind-eq",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     ft = { "clojure", "fennel", "janet", "query" },
