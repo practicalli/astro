@@ -1,17 +1,19 @@
--- Practicalli Termux Config
+-- Practicalli Termux User Overrides
 --
--- Configure local LSP language servers to be run locallh
+-- Configure local LSP language servers to be run locally
 -- as mason install fails on termux
--- Clojure LSP
--- Lua LSP
+-- Clojure LSP server
+-- Lua Language server
 
--- INFO: conditional to only load config ig running on Termux
+-- INFO: conditional only loads config if
+-- `OS_TERMUX` is true
+--
 local termux = vim.env.OS_TERMUX
 if not termux then return {} end
 
 ---@type LazySpec
 return {
-  -- Disable locally installed LSP language servers
+  -- INFO: prevent Mason loading Clojure & Lua LSP servers
   {
     "williamboman/mason-lspconfig.nvim",
     opts = function(_, opts)
