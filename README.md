@@ -52,10 +52,12 @@ The configuration is based on the AstroNvim template config.  Changes to existin
 
 `lua/plugins/example-config.lua` shows how to modify and extend the AstroNvim configuration.  This config is not loaded by defult.
 
-Create your own `lua/plugins/user-name.lua` file to
+Create your own `lua/plugins/user-name.lua` file to:
 
 - override default plugin configuration
 - add new plugins (or create a new file for a plugin to make them easier to be optional) or by customising the `lua/plugins/user.lua` file.
+
+`lua/plugins/user-practicalli.lua` is an example of a user configuration that adds plugins and overrides plugin options.
 
 > Lua files in the `lua/plugins` directory are loaded in alphabetical order
 

@@ -9,6 +9,14 @@
 
 -- INFO: Create a `lua/plugins/your-name.lua` for significant changes
 
+-- INFO: Files under `lua/plugins/*.lua` load in alphabetical order,
+-- so plugin overrides should be the last file to load
+
+-- INFO: conditional to skip this config
+-- if `PRACTICALLI_ASTRO` environment variable set to false
+local practicalli = vim.env.PRACTICALLI_ASTRO
+if practicalli == "false" then return {} end
+
 -- if true then return {} end   INFO: Comment this line to deactivate configuration
 
 ---@type LazySpec

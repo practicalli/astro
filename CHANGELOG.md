@@ -46,6 +46,8 @@
 - termux: disable mason from installing the lua_ls language server
 - termux: neogit v0.0.1 for nvim 0.9.x support
 - termux: conditional check for OS_TERMUX to load config
+- practicalli: move to `user-practicalli.lua` to load config last
+- practicalli: add conditional using `PRACTICALLI_ASTRO` environment variable
 
 ## Changed
 - readme: expand on description and use
