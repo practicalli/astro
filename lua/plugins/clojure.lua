@@ -1,11 +1,15 @@
 -- ------------------------------------------
 -- Clojure Development support - manual configuration
 --
--- Example plugin configurations for a customised Clojure workflow
+-- Example plugin configurations to create a customised Clojure workflow
+-- clojure-lsp server via mason
+-- treesitter clojure parser
+-- ts-comment.nvim with `;;` and `;` support
+-- structured editing with parinfer and treesitter-sexp plugins
+-- REPL connected editor with Conjure plugin (log HUD hidden by default)
 --
 -- NOTE: disable AstroCommunity Clojure Pack in `community.lua`
 -- before using this configuration
--- Comment plugins not required
 -- ------------------------------------------
 
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
@@ -155,6 +159,8 @@ return {
       opts = {
         options = {
           g = {
+            -- INFO: `:help conjure-client-clojure-nrepl-configuration` for Conjure Clojure options
+
             -- Width of HUD as percentage of the editor width between 0.0 and 1.0. Default: `0.42`
             ["conjure#log#hud#width"] = 1,
             -- Display HUD (REPL log). Default: `true`
