@@ -42,6 +42,16 @@ return {
     end,
   },
 
+  -- Comments
+  { "numToStr/Comment.nvim", enabled = false },
+  { "JoosepAlviste/nvim-ts-context-commentstring", enabled = false },
+  {
+    "folke/ts-comments.nvim",
+    opts = {},
+    event = "VeryLazy",
+    enabled = vim.fn.has "nvim-0.10.0" == 1,
+  },
+
   -- Structural Editing
   -- Parinfer Alignment driven structured editing for Clojure and more
   -- ["clojure", "scheme", "lisp", "racket", "hy", "fennel", "janet", "carp", "wast", "yuck"]
