@@ -16,6 +16,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     opts = function(_, opts)
       opts.ensure_installed = vim.tbl_filter(function(s) return s ~= "lua_ls" end, opts.ensure_installed)
+      opts.ensure_installed = vim.tbl_filter(function(s) return s ~= "clojure_lsp" end, opts.ensure_installed)
     end,
   },
 
