@@ -138,6 +138,11 @@ return {
   -- ----------------------------------------------
 
   -- ----------------------------------------------
+  -- Terminal Integration
+  { import = "astrocommunity.terminal-integration.flatten-nvim" },
+  -- ----------------------------------------------
+
+  -- ----------------------------------------------
   -- GUI
   -- Neovide GUI - scaling functions & key mappings
   { import = "astrocommunity.recipes.neovide" },

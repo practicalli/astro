@@ -50,6 +50,7 @@
 - practicalli: add conditional using `PRACTICALLI_ASTRO` environment variable
 - termux: `clojure_lsp` server excluded from mason install
 - termux: comment support for neovim 0.9.x
+- community: flatten-nvm to open files and command output in existing neovim instance
 
 ## Changed
 - readme: expand on description and use
