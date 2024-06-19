@@ -36,7 +36,7 @@ return {
   -- Regular Expressions explained
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
 
-  -- Multiple Cusors
+  -- Multiple Cursors
   -- `gm` VM_Leader set in astrocore plugin
   { import = "astrocommunity.editing-support.vim-visual-multi" },
 
