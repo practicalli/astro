@@ -58,3 +58,4 @@
 - astrocore: reset file to original config from template
 - clojure: add nvim-treesitter-sexp and comment paredit plugins
 - community: 2 second navigation message timeout (nvim-notify)
+- practicalli: include AstroCommunity options for neogit, noice & zen-mode

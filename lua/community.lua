@@ -42,23 +42,6 @@ return {
 
   -- Distraction free editing
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
-  {
-    "folke/zen-mode.nvim",
-    opts = {
-      -- override default configuration
-      -- https://github.com/folke/zen-mode.nvim#%EF%B8%8F-configuration
-      plugins = {
-        options = {
-          enabled = true,
-        },
-        -- Kitty Terminal
-        kitty = {
-          enabled = true,
-          font = "+4", -- font size increment
-        },
-      },
-    },
-  },
   -- ----------------------------------------------
 
   -- ----------------------------------------------
@@ -81,26 +64,7 @@ return {
   -- Source Control
   -- Neogit interactive git client
   { import = "astrocommunity.git.neogit" },
-  -- overrides: add diffview and key mappings
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
-    },
-    opts = {
-      disable_commit_confirmation = true,
-      -- disable_builtin_notifications = false,
-      disable_signs = true, -- duplicate signs if enabled
-      use_magit_keybindings = true,
-      integrations = {
-        diffview = true,
-      },
-    },
-    keys = {
-      -- Neogit status - overrides stage hunk astronvim mapping
-      { "<leader>gs", "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
-    },
-  },
+
   -- Manage GitHub Gists
   -- Keymaps defined in `lua/plugins/practicalli.lua`
   { import = "astrocommunity.git.gist-nvim" },
@@ -113,28 +77,6 @@ return {
   -- Utility
   -- rich command prompt
   { import = "astrocommunity.utility.noice-nvim" },
-  {
-    "noice.nvim",
-    opts = function(_, opts)
-      local utils = require "astrocore"
-      return utils.extend_tbl(opts, {
-        presets = {
-          lsp_doc_border = true, -- add a border to hover docs and signature help
-        },
-      })
-    end,
-  },
-  -- Override notification display defaults
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      top_down = false,
-      timeout = 2000, -- shorter display duration, default 3000
-      -- log messages level - default 5 (everything), 1 (minimum)
-      level = 3,
-      -- background_color = "#000000",
-    },
-  },
   -- ----------------------------------------------
 
   -- ----------------------------------------------

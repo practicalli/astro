@@ -21,6 +21,8 @@ if practicalli == "false" then return {} end
 
 ---@type LazySpec
 return {
+
+  -- ------------------------------------------
   -- Startup Dashboard
   {
     "goolord/alpha-nvim",
@@ -37,7 +39,9 @@ return {
       return opts
     end,
   },
+  -- ------------------------------------------
 
+  -- ------------------------------------------
   -- `fd` alternative to the `ESC` key
   {
     "max397574/better-escape.nvim",
@@ -47,7 +51,69 @@ return {
       mapping = { "fd" },
     },
   },
+  -- ------------------------------------------
 
+  -- ------------------------------------------
+  -- AstroCommunity Plugin Options:
+  --
+  -- Neogit: astrocommunity.git.neogit
+  {
+    "neogit",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
+    },
+    opts = {
+      disable_signs = true, -- duplicate signs if enabled
+      graph_style = "unicode", -- elegant commit graph
+      integrations = { diffview = true },
+    },
+  },
+
+  -- Noice: astrocommunity.utility.noice-nvim
+  {
+    "noice.nvim",
+    opts = function(_, opts)
+      local utils = require "astrocore"
+      return utils.extend_tbl(opts, {
+        presets = {
+          lsp_doc_border = true, -- add a border to hover docs and signature help
+        },
+      })
+    end,
+  },
+  -- nvim-notify controls how messages are displayed
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      top_down = false,
+      timeout = 2000, -- shorter display duration, default 3000
+      -- log messages level - default 5 (everything), 1 (minimum)
+      level = 3,
+      -- background_color = "#000000",
+    },
+  },
+
+  -- Zen-Mode: astrocommunity.editing-support.zen-mode-nvim
+  -- https://github.com/folke/zen-mode.nvim#%EF%B8%8F-configuration
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      plugins = {
+        options = {
+          enabled = true,
+        },
+        -- Kitty Terminal
+        kitty = {
+          enabled = true,
+          font = "+4", -- font size increment
+        },
+      },
+    },
+  },
+  -- ------------------------------------------
+
+  -- ------------------------------------------
+  -- AstroNvim UI Plugin Options
   {
     -- AstroUI provides the basis for configuring the AstroNvim User Interface
     -- Configuration documentation can be found with `:h astroui`
@@ -57,9 +123,10 @@ return {
       colorscheme = "everforest",
     },
   },
+  -- ------------------------------------------
 
-  -- ------------------------
-  -- Practicalli Options and  Key Mappings
+  -- ------------------------------------------
+  -- AstroNvim Core Plugin Options and Key Mappings
   {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
@@ -128,6 +195,8 @@ return {
 
           -- Git Menu
           -- Menu mappings
+          -- Neogit status - overrides stage hunk astronvim mapping
+          ["<leader>gs"] = { "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
           -- ["<leader>gn"] = { name = " Neogit" }, -- Neogit menu with alternate logo
           ["<leader>gh"] = false, -- disable Reset Git Hunk mapping, used for Octo in plugins/github.lua
           ["<leader>gH"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
@@ -146,4 +215,5 @@ return {
       },
     },
   },
+  -- ------------------------------------------
 }
