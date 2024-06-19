@@ -4,6 +4,9 @@
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
 
+-- Plugin config overrides should be in a `lua/plugins/*.lua` of a matching name
+-- or in a user config, e.g. `lua/plugins/user-practicalli.lua`
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
