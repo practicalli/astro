@@ -59,3 +59,4 @@
 - clojure: add nvim-treesitter-sexp and comment paredit plugins
 - community: 2 second navigation message timeout (nvim-notify)
 - practicalli: include AstroCommunity options for neogit, noice & zen-mode
+- practicalli: neogit key works consistently when set in plugin config 

@@ -67,6 +67,10 @@ return {
       graph_style = "unicode", -- elegant commit graph
       integrations = { diffview = true },
     },
+    keys = {
+      -- Neogit status - overrides stage hunk astronvim mapping
+      { "<leader>gs", "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
+    },
   },
 
   -- Noice: astrocommunity.utility.noice-nvim
@@ -196,7 +200,6 @@ return {
           -- Git Menu
           -- Menu mappings
           -- Neogit status - overrides stage hunk astronvim mapping
-          ["<leader>gs"] = { "<cmd>Neogit<cr>", desc = "Status (Neogit)" },
           -- ["<leader>gn"] = { name = " Neogit" }, -- Neogit menu with alternate logo
           ["<leader>gh"] = false, -- disable Reset Git Hunk mapping, used for Octo in plugins/github.lua
           ["<leader>gH"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
