@@ -51,6 +51,7 @@
 - termux: `clojure_lsp` server excluded from mason install
 - termux: comment support for neovim 0.9.x
 - community: flatten-nvm to open files and command output in existing neovim instance
+- practicalli: add trim plugin to automatically remove whitespace
 
 ## Changed
 - readme: expand on description and use
