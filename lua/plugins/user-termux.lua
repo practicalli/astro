@@ -44,10 +44,10 @@ return {
   },
 
   -- INFO: Pin Neogit for Neovim 0.9.x
-  {
-    "NeogitOrg/neogit",
-    tag = "v0.0.1",
-  },
+  -- {
+  --   "NeogitOrg/neogit",
+  --   tag = "v0.0.1",
+  -- },
 
   -- Commenting for Neovim 0.9.0
   { "numToStr/Comment.nvim", enabled = true },
