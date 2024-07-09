@@ -52,6 +52,7 @@
 - termux: comment support for neovim 0.9.x
 - community: flatten-nvm to open files and command output in existing neovim instance
 - practicalli: add trim plugin to automatically remove whitespace
+- community: example disable of plugins from an astro community pack
 
 ## Changed
 - readme: expand on description and use

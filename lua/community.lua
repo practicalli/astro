@@ -51,6 +51,9 @@ return {
   -- Packs
   -- Treesitter: clojure , Lsp: clojure-lsp, Lint/format:
   { import = "astrocommunity.pack.clojure" },
+  -- Disable plugins contained in the clojure pack
+  -- { "nvim-parinfer", enabled = false },
+  -- { "nvim-treesitter-sexp", enabled = false },
   -- ----------------------------------------------
 
   -- ----------------------------------------------
