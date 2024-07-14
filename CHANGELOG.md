@@ -28,7 +28,7 @@
 - clojure: conjure, paredit, parinfer, parpar & nvim-treesitter-sexp plugins
 - neo-tree: override examples, show hidden in alternate style
 - plantuml: key mapping to call out to plantuml jar or binary
-- example-config: add new plugins & override existing plugin config 
+- example-config: add new plugins & override existing plugin config
 - clojure: which-key mappings for nvim-treesitter-sexp structural editing
 - practicalli: move neovim options and key mappings from astrocore.lua
 - practicalli: set everforest theme, remove from astroui.lua
@@ -53,6 +53,7 @@
 - community: flatten-nvm to open files and command output in existing neovim instance
 - practicalli: add trim plugin to automatically remove whitespace
 - community: example disable of plugins from an astro community pack
+- practicalli: which-key vertical `helix` menu layout option
 
 ## Changed
 - readme: expand on description and use
@@ -63,3 +64,4 @@
 - practicalli: include AstroCommunity options for neogit, noice & zen-mode
 - practicalli: neogit key works consistently when set in plugin config
 - termux: comment neogit plugin pin, neovim 0.10.0 released for termux
+- practicalli: neogit key works consistently when set in plugin config
