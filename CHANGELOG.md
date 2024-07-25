@@ -68,3 +68,4 @@
 - practicalli: neogit key works consistently when set in plugin config
 - practicalli: updated config for better-escape.nvim plugin rewrite
 - community: import spectre from search category (was project)
+- astro: capitalise Leader and LocalLeader within key mapping configuration.

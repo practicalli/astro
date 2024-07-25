@@ -22,9 +22,9 @@ return {
         n = {
           -- ["<Leader>lu"] = { desc = "UML" },
           -- shell to plantuml binary
-          -- ["<leader>lu"] = { ':silent exec "!plantuml % && open %:s,clj,png,"<CR>', desc = "UML diagram" },
+          -- ["<Leader>lu"] = { ':silent exec "!plantuml % && open %:s,clj,png,"<CR>', desc = "UML diagram" },
           -- shell to java and plantuml jar
-          ["<leader>lu"] = {
+          ["<Leader>lu"] = {
             ':silent exec "!/usr/bin/java -jar ~/.local/share/plantuml/current.jar % && open %:s,clj,png,"<CR>',
             desc = "UML diagram",
           },

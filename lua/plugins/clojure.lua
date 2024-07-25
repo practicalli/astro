@@ -81,7 +81,7 @@ return {
         },
         keys = {
           -- Toggle Parinfer on/off (globally)
-          { "<leader>TP", "<cmd>ParinferOn! <cr>", desc = "Toggle Parinfer" },
+          { "<Leader>TP", "<cmd>ParinferOn! <cr>", desc = "Toggle Parinfer" },
         },
       },
     },
