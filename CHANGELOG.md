@@ -54,6 +54,7 @@
 - practicalli: add trim plugin to automatically remove whitespace
 - community: example disable of plugins from an astro community pack
 - practicalli: which-key vertical `helix` menu layout option
+- practicalli: conjure sub-menus for which-key
 
 ## Changed
 - readme: expand on description and use

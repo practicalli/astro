@@ -19,6 +19,9 @@ if practicalli == "false" then return {} end
 
 -- if true then return {} end   INFO: Comment this line to deactivate configuration
 
+-- Which-key local to add keys
+local whichkey = require "which-key"
+
 ---@type LazySpec
 return {
 
@@ -144,6 +147,18 @@ return {
     opts = {
       ---@type false | "classic" | "modern" | "helix"
       preset = "helix",
+    },
+
+    whichkey.add {
+      -- Conjure sub-menus
+      { "<LocalLeader>c", group = "Connect" },
+      { "<LocalLeader>e", group = "Evaluate" },
+      { "<LocalLeader>g", group = "Go" },
+      { "<LocalLeader>l", group = "Log" },
+      { "<LocalLeader>r", group = "Refresh" },
+      { "<LocalLeader>s", group = "Session" },
+      { "<LocalLeader>t", group = "Test" },
+      { "<LocalLeader>v", group = "Values" },
     },
   },
   -- ------------------------------------------
