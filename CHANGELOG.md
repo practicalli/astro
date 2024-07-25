@@ -65,3 +65,4 @@
 - practicalli: neogit key works consistently when set in plugin config
 - termux: comment neogit plugin pin, neovim 0.10.0 released for termux
 - practicalli: neogit key works consistently when set in plugin config
+- practicalli: updated config for better-escape.nvim plugin rewrite
