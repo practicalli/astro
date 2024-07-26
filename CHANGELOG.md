@@ -1,5 +1,6 @@
 # Unreleased
 
+# 2024-07-26 Initial release
 
 ## Added
 - community: enable and import clojure pack
