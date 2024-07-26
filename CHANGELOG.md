@@ -55,6 +55,7 @@
 - community: example disable of plugins from an astro community pack
 - practicalli: which-key vertical `helix` menu layout option
 - practicalli: conjure sub-menus for which-key
+- community: telescope live grep args search via file name pattern
 
 ## Changed
 - readme: expand on description and use

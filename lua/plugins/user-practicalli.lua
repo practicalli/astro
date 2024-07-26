@@ -237,6 +237,11 @@ return {
           -- Find Menu
           -- browse via directory structure, create and modify paths
           ["<Leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "Explorer" },
+          -- find word for specific file patterns
+          ["<Leader>fg"] = {
+            "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+            desc = "Grep Word",
+          },
 
           -- Projects
           ["<Leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },

@@ -83,6 +83,9 @@ return {
   -- Utility
   -- rich command prompt
   { import = "astrocommunity.utility.noice-nvim" },
+
+  -- word search in specific file patterns
+  { import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
   -- ----------------------------------------------
 
   -- ----------------------------------------------
