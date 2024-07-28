@@ -8,11 +8,10 @@ Clojure development and more with [Neovim 0.10.x](https://neovim.org/) and [Astr
 ## 🛠️ Installation
 
 - [Kitty Terminal](https://practical.li/engineering-playbook/command-line/kitty-terminal/)
-- [Neovim 0.10.x](https://github.com/neovim/neovim/releases/tag/v0.10.0) (0.9.x will also work)
-- [Practicalli Neovim Configuration](https://practical.li/neovim/configuration/astronvim/) details install AstroNvim and Practicalli Astro Config
+- [Install Neovim and supporting tools](https://practical.li/neovim/install/neovim/)
 - [Clojure install](https://practical.li/clojure/install/)
 
-Clone the Practicalli Astro repository (optionally creating a fork first should customisation be required)
+Clone the Practicalli Astro repository (create a fork if customisation desired)
 
 ```shell
 git clone git@github.com:practicalli/astro $HOME/.config/nvim
@@ -28,10 +27,14 @@ nvim
 
 Clone to `$HOME/.config/astronvim` if there is an existing neovim configuration and use the `NVIM_APPNAME=astronvim nvim` command to start Neovim with AstroNvim configuration
 
+```shell
+git clone git@github.com:practicalli/astro $HOME/.config/nvim-astro
+```
+
 Create a shell alias to run the new configuration, e.g. in `.bashrc` or `.zshrc` (or a `shell-aliases` file that each shell rc file sources)
 
 ```config
-alias astro="NVIM_APPNAME=astro nvim"
+alias astro="NVIM_APPNAME=nvim-astro nvim"
 ```
 
 Load the alias into the current shell (or open a new shell)
@@ -40,7 +43,7 @@ Load the alias into the current shell (or open a new shell)
 source shell-aliases
 ```
 
-Run `astro` and wait for the plugins to update
+Run `astro` and allow neovim packages to be installed and Treesitter language parsers to compile.
 
 ```shell
 astro
