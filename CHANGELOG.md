@@ -1,5 +1,8 @@
 # Unreleased
 
+## Added
+- after: conjure menu group names for clojure filetype plugin
+
 # 2024-07-26 Initial release
 
 ## Added

@@ -148,18 +148,6 @@ return {
       ---@type false | "classic" | "modern" | "helix"
       preset = "helix",
     },
-
-    whichkey.add {
-      -- Conjure sub-menus
-      { "<LocalLeader>c", group = "Connect" },
-      { "<LocalLeader>e", group = "Evaluate" },
-      { "<LocalLeader>g", group = "Go" },
-      { "<LocalLeader>l", group = "Log" },
-      { "<LocalLeader>r", group = "Refresh" },
-      { "<LocalLeader>s", group = "Session" },
-      { "<LocalLeader>t", group = "Test" },
-      { "<LocalLeader>v", group = "Values" },
-    },
   },
   -- ------------------------------------------
 
