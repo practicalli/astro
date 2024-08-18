@@ -2,6 +2,7 @@
 
 ## Added
 - after: conjure menu group names for clojure filetype plugin
+- dev: dont ignore `after` directory pattern in .gitignore
 
 # 2024-07-26 Initial release
 

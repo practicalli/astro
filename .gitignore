@@ -1,12 +1,12 @@
 # ------------------------
 # Git Ignore file patterns
-# 
+#
 # Ignore all except patterns starting with !
 # Add comments on separate lines, not same line as pattern
 # ------------------------
 
 # ------------------------
-# Ignore everthing in root directory
+# Ignore everything in root directory
 /*
 # ------------------------
 
@@ -18,7 +18,8 @@
 # ------------------------
 
 # ------------------------
-# AstroNvim 
+# AstroNvim
+!after/
 !lua/
 !snippets/
 !init.lua
