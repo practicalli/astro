@@ -6,6 +6,7 @@
 
 ## Changed
 - practicalli: disable neovim providers for node, perl, python, ruby
+- snippets: fixed placeholder syntax without labels
 
 
 # 2024-08-24 Refactor Clojure Which-key mappings
@@ -13,7 +14,6 @@
 ## Added
 - after: conjure menu group names for clojure filetype plugin
 - dev: dont ignore `after` directory pattern in .gitignore
-
 
 # 2024-07-26 Initial release
 
