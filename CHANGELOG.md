@@ -1,5 +1,7 @@
 # Unreleased
 
+# 2024-08-24 Refactor Clojure Which-key mappings
+
 ## Added
 - after: conjure menu group names for clojure filetype plugin
 - dev: dont ignore `after` directory pattern in .gitignore
