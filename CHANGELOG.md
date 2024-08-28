@@ -1,5 +1,9 @@
 # Unreleased
 
+## Added
+- snippets: markdown embedded code example - 4clojure
+
+
 # 2024-08-24 Refactor Clojure Which-key mappings
 
 ## Added

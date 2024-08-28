@@ -108,7 +108,7 @@
     "prefix": "post-header",
     "body": [
       "---
-title: 
+title:
 date: 2024-01-
 authors:
   - practicalli
@@ -127,9 +127,9 @@ tags:
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
@@ -144,5 +144,15 @@ Thank you.
       "++${0}++"
     ],
     "description": "MkDocs Key form"
+  },
+  "mkdocs code block embeded": {
+    "prefix": "mkdocs-code-embed-4clojure",
+    "body": [
+      "!!! EXAMPLE \"Design Journal - 4Clojure #${1:number}\"
+    ```clojure
+    --8<-- \"https://github.com/practicalli/four-clojure/blob/master/src/four_clojure/${2:filename}?raw=true\"
+    ```"
+    ]
+
   }
 }
