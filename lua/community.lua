@@ -54,6 +54,8 @@ return {
   -- Disable plugins contained in the clojure pack
   -- { "nvim-parinfer", enabled = false },
   -- { "nvim-treesitter-sexp", enabled = false },
+
+  { import = "astrocommunity.pack.json" },
   -- ----------------------------------------------
 
   -- ----------------------------------------------
