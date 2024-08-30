@@ -177,13 +177,18 @@ return {
           wrap = true, -- sets vim.opt.wrap
           guifont = "Fira Code:h16", -- neovide font family & size
         },
+        -- configure global vim variables: vim.g
         g = {
-          -- configure global vim variables: vim.g
-          -- This can be found in the `lua/lazy_setup.lua` file
+          -- Neovim lanaguage provides - disable language integration not required
+          loaded_node_provider = 0,
+          loaded_perl_provider = 0,
+          loaded_python3_provider = 0,
+          loaded_ruby_provider = 0,
+
+          -- Leader key for Visual-Multi Cursors (Multiple Cursors)
           VM_leader = "gm", -- Visual Multi Leader (multiple cursors - user plugin)
 
           -- Conjure plugin overrides
-
           -- comment pattern for eval to comment command
           ["conjure#eval#comment_prefix"] = ";; ",
           -- Hightlight evaluated forms

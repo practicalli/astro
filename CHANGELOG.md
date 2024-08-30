@@ -11,6 +11,10 @@
 - dev: dont ignore `after` directory pattern in .gitignore
 - community: json pack to format api responses, etc.
 
+## Changed
+- practicalli: disable neovim providers for node, perl, python, ruby
+
+
 # 2024-07-26 Initial release
 
 ## Added
