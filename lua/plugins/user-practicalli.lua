@@ -265,9 +265,6 @@ return {
             desc = "Grep Word",
           },
 
-          -- Projects
-          ["<Leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Projects" },
-
           -- Editing
           ["zZ"] = { "<cmd>ZenMode<cr>", desc = " Zen mode" },
 
