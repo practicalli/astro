@@ -159,7 +159,7 @@ return {
     "AstroNvim/astroui",
     ---@type AstroUIOpts
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "catppuccin-macchiato",
     },
   },
   -- ------------------------------------------
