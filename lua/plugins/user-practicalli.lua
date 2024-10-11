@@ -205,6 +205,11 @@ return {
 
           -- Test runner: "clojure", "clojuresCRipt", "kaocha"
           ["conjure#client#clojure#nrepl#test#runner"] = "kaocha",
+
+          -- Minimise very long lines slow down:
+          -- `g:conjure#log#treesitter` false (true by default)
+          -- ["conjure#log##treesitter"] = false,
+          -- `g:conjure#log#disable_diagnostics` true (disabled) by default
         },
       },
       mappings = {

@@ -3,6 +3,7 @@
 ## Added
 - snippets: markdown embedded code example - 4clojure
 - community: json pack to format api responses, etc.
+- practicalli: conjure lsp and treesitter log configs
 
 ## Changed
 - practicalli: disable neovim providers for node, perl, python, ruby
