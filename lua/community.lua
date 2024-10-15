@@ -77,6 +77,9 @@ return {
   -- Keymaps defined in `lua/plugins/practicalli.lua`
   { import = "astrocommunity.git.gist-nvim" },
 
+  -- Open in GitHub / GitLab websites
+  { import = "astrocommunity.git.gitlinker-nvim" },
+
   -- GitHub Pull Requests and Issues
   -- Octo plugin configured in `lua/plugins/github.lua`
   -- ----------------------------------------------
