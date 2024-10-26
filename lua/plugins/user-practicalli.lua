@@ -88,7 +88,8 @@ return {
     },
     opts = {
       disable_signs = true, -- duplicate signs if enabled
-      graph_style = "unicode", -- elegant commit graph
+      -- graph_style = "unicode", -- elegant commit graph
+      graph_style = "kitty", -- elegant commit graph
       integrations = { diffview = true },
     },
     keys = {
