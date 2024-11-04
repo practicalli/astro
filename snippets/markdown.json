@@ -118,8 +118,6 @@ tags:
   - clojure
 ---
 
-**Thoughts for the week**
-
 $0
 
 <!-- more -->
@@ -164,6 +162,5 @@ Thank you.
     --8<-- \"https://github.com/practicalli/four-clojure/blob/master/src/four_clojure/${2:filename}?raw=true\"
     ```"
     ]
-
   }
 }
