@@ -163,6 +163,25 @@ return {
       colorscheme = "everforest",
     },
   },
+
+  -- ------------------------------------------
+  -- AstroNvim LSP Configuration
+  -- INFO: Remove to use Mason install of Clojure LSP rather than local install
+  -- INFO: Not required once PR merged: https://github.com/mason-org/mason-registry/pull/7896
+  {
+    "AstroNvim/astrolsp",
+    ---@type AstroLSPOpts
+    opts = {
+      servers = { "clojure_lsp" }, -- use locally installed Clojure LSP server
+    },
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = function(_, opts)
+      -- Remove clojure_lsp from mason install (added by clojure pack)
+      opts.ensure_installed = vim.tbl_filter(function(s) return s ~= "clojure_lsp" end, opts.ensure_installed)
+    end,
+  },
   -- ------------------------------------------
 
   -- ------------------------------------------

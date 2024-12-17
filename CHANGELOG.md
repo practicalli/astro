@@ -12,6 +12,7 @@
 - snippets: fixed placeholder syntax without labels
 - practicalli: kitty style graph for neogit
 - update: changes from astronvim/template
+- lsp: use local clojure lsp server and prevent mason install
 
 
 # 2024-08-24 Refactor Clojure Which-key mappings
