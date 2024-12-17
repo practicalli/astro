@@ -1,5 +1,7 @@
 # Unreleased
 
+# 2024-12-17 Local install of Clojure LSP
+
 ## Added
 - snippets: markdown embedded code example - 4clojure
 - community: json pack to format api responses, etc.
