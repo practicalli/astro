@@ -6,6 +6,7 @@
 - practicalli: conjure lsp and treesitter log configs
 - community: gitlinker-nvim open git files & lines in GitHub/GitLab
 - snippet: mkdocs embed external code link for markdown
+- practicalli: example transparent background for everforest theme
 
 ## Changed
 - practicalli: disable neovim providers for node, perl, python, ruby

@@ -163,6 +163,16 @@ return {
       colorscheme = "everforest",
     },
   },
+  -- Configure Everforest theme
+  -- {
+  --   "neanias/everforest-nvim",
+  --   config = function()
+  --     require("everforest").setup {
+  --       transparent_background_level = 1,
+  --     }
+  --   end,
+  -- },
+  -- ------------------------------------------
 
   -- ------------------------------------------
   -- AstroNvim LSP Configuration
