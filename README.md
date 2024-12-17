@@ -72,7 +72,7 @@ Mason is used to install LSP servers, format & lint tools which have their curre
 
 As of 17 December 2024, Practicalli astro is configured to use a locally installed Clojure LSP server to get the latest release.
 
-Install Clojure LSP from the GitHub Releases or follow the [instructions for your operating system](https://clojure-lsp.io/installation/)
+Install Clojure LSP from the [GitHub Releases](https://github.com/clojure-lsp/clojure-lsp/releases) or follow the [instructions for your operating system](https://clojure-lsp.io/installation/)
 
 Once Mason Repository [PR #7896 bump(clojure-lsp): update to v2024.11.08-17.49.29](https://github.com/mason-org/mason-registry/pull/7896) is merged, Practicalli Astro will revert to the Mason install of Clojure LSP
 
