@@ -1,5 +1,8 @@
 # Unreleased
 
+## Changes
+- lsp: revert to using mason install of Clojure LSP (Mason Registry updated)
+
 # 2024-12-17 Local install of Clojure LSP
 
 ## Added
