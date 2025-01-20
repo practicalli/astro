@@ -108,8 +108,8 @@
     "prefix": "post-header",
     "body": [
       "---
-title:
-date: 2024-0$1-$2
+title: $1
+date: 2025-0$2-$3
 authors:
   - practicalli
 categories:
