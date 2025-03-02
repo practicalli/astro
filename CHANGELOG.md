@@ -1,5 +1,8 @@
 # Unreleased
 
+## Added
+- clojure: parinfer group and toggle key map
+
 ## Changes
 - lsp: revert to using mason install of Clojure LSP (Mason Registry updated)
 - practicalli: simplify conditional config expressions, remove local whichkey (redundant)
