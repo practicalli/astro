@@ -3,6 +3,7 @@
 ## Changes
 - lsp: revert to using mason install of Clojure LSP (Mason Registry updated)
 - practicalli: simplify conditional config expressions, remove local whichkey (redundant)
+- clojure: update names for conjure sub-menus
 
 # 2024-12-17 Local install of Clojure LSP
 

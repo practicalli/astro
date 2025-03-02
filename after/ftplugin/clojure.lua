@@ -12,11 +12,12 @@ return {
       { "<LocalLeader>e", group = "Evaluate" },
       { "<LocalLeader>ec", group = "Comment" },
       { "<LocalLeader>g", group = "Go" },
-      { "<LocalLeader>l", group = "Log" },
+      { "<LocalLeader>l", group = "REPl Log" },
       { "<LocalLeader>r", group = "Refresh" },
       { "<LocalLeader>s", group = "Session" },
       { "<LocalLeader>t", group = "Test" },
       { "<LocalLeader>v", group = "Values" },
+      { "<LocalLeader>x", group = "macroXpand" },
     },
   },
 }
