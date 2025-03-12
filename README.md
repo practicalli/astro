@@ -4,7 +4,6 @@ Clojure development and more with [Neovim 0.10.x](https://neovim.org/) and [Astr
 
 > [Practicalli Neovim](https://practical.li/neovim/) describes the Clojure REPL workflow, rich Git and GitHub clients and easy management of plugins and tools using this configuration.
 
-**[Requires a local install of the Clojure LSP server until Mason Registry updated](#clojure-lsp)**
 
 ## 🛠️ Installation
 
