@@ -2,6 +2,7 @@
 
 ## Added
 - clojure: parinfer group and toggle key map
+- practicalli: which-key sub-menu for Visual-Multi Cursors (Multiple Cursors)
 
 ## Changes
 - lsp: revert to using mason install of Clojure LSP (Mason Registry updated)

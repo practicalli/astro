@@ -242,6 +242,9 @@ return {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
 
+          -- whick-key sub-menu for Visual-Multi Cursors (Multiple Cursors)
+          ["gm"] = { name = "Multiple Cursors" },
+
           -- Toggle last open buffer
           ["<Leader><tab>"] = { "<cmd>b#<cr>", desc = "Last tab" },
 
