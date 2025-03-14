@@ -69,6 +69,18 @@ return {
       -- highlight_bg = "#800080", -- or 'purple'
     },
   },
+  { -- Show key presses in Neovim window
+    "nvzone/showkeys",
+    lazy = false,
+    cmd = "ShowkeysToggle",
+    opts = {
+      excluded_modes = { "i", "t" }, -- skip insert and terminal
+      position = "bottom-center",
+      show_count = true,
+      maxkeys = 4,
+      timeout = 4,
+    },
+  },
   -- ------------------------------------------
 
   -- ------------------------------------------
@@ -281,6 +293,9 @@ return {
           ["<Leader>ghgr"] = { "<cmd>GistCreate<cr>", desc = "Gist Region" },
           ["<Leader>ghgg"] = { "<cmd>GistCreateFromFile<cr>", desc = "Gist File" },
           ["<Leader>ghgl"] = { "<cmd>GistsList<cr>", desc = "List Gists" },
+
+          -- Showkeys plugin (visualise key presses in Neovim window)
+          ["<Leader>uk"] = { "<cmd>ShowkeysToggle<cr>", desc = "Toggle Showkeys" },
         },
         t = {
           -- terminal mode key bindings

@@ -1,5 +1,8 @@
 # Unreleased
 
+## Added
+- practicalli: showkeys plugin and key binding (#30)
+
 # 2025-03-12
 ## Added
 - clojure: parinfer group and toggle key map
