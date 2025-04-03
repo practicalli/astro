@@ -1,5 +1,8 @@
 # Unreleased
 
+## Changes
+- clojure: enable nvim-treesitter-sexp if not running neovim 0.11
+
 # 2025-03-12
 ## Added
 - clojure: parinfer group and toggle key map
