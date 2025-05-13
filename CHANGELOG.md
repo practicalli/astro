@@ -2,6 +2,7 @@
 
 ## Changes
 - clojure: enable nvim-treesitter-sexp if not running neovim 0.11
+- snippets: common markdown syntax
 
 ## Added
 - practicalli: showkeys plugin and key binding (#30)

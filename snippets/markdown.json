@@ -155,7 +155,6 @@ Thank you.
     --8<-- \"${2:url}?raw=true\"
     ```"
     ]
-
   },
   "mkdocs code block fourclojure": {
     "prefix": "mkdocs-code-embed-4clojure",
@@ -165,5 +164,55 @@ Thank you.
     --8<-- \"https://github.com/practicalli/four-clojure/blob/master/src/four_clojure/${2:filename}?raw=true\"
     ```"
     ]
+  },
+  "link": {
+    "prefix": "link",
+    "body": "[$1]($2)$0",
+    "description": "Add link"
+  },
+  "image": {
+    "prefix": "img",
+    "body": "![$1]($2)$0",
+    "description": "Add image"
+  },
+  "strikethrough": {
+    "prefix": "strikethrough",
+    "body": "~~$1~~$0",
+    "description": "Insert strikethrough"
+  },
+  "insert bold text": {
+    "prefix": "bold",
+    "body": "**$1**$0",
+    "description": "Insert bold text"
+  },
+  "insert italic text": {
+    "prefix": "italic",
+    "body": "*$1*$0",
+    "description": "Insert italic text"
+  },
+  "insert bold and italic text": {
+    "prefix": "bolditalic",
+    "body": "***$1***$0",
+    "description": "Insert bold and italic text"
+  },
+  "insert quoted text": {
+    "prefix": "quote",
+    "body": "> $1",
+    "description": "Insert quoted text"
+  },
+  "insert code block": {
+    "prefix": "codeblocky",
+    "body": "```${1:language}\n\t$2\n```$0",
+    "description": "Insert fenced code block"
+  },
+  "insert horizontal rule": {
+    "prefix": "rule",
+    "body": "----------\n",
+    "description": "Insert horizontal rule"
+  },
+  "collapsed detail": {
+    "prefix": "collapsed",
+    "body": "<details>\n\t<summary>$1</summary>\n\t$2\n</details>$0",
+    "description": "Collapse text section"
   }
 }
