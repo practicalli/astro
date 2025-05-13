@@ -1,5 +1,6 @@
 # Unreleased
 
+# 2025-05-13
 ## Changes
 - clojure: enable nvim-treesitter-sexp if not running neovim 0.11
 - snippets: common markdown syntax
