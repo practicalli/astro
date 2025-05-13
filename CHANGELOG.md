@@ -3,6 +3,7 @@
 ## Changes
 - clojure: enable nvim-treesitter-sexp if not running neovim 0.11
 - snippets: common markdown syntax
+- practicalli: disable default better-escape keys due to conflict
 
 ## Added
 - practicalli: showkeys plugin and key binding (#30)

@@ -45,7 +45,7 @@ return {
     event = "InsertCharPre",
     opts = {
       timeout = vim.o.timeoutlen,
-      default_mappings = true,
+      default_mappings = false,
       mappings = {
         i = { f = { d = "<Esc>" } },
         c = { f = { d = "<Esc>" } },
