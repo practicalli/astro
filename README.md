@@ -4,11 +4,12 @@ Clojure development and more with [Neovim 0.10.x](https://neovim.org/) and [Astr
 
 [Practicalli Neovim](https://practical.li/neovim/) describes the Clojure REPL workflow, rich Git and GitHub clients and easy management of plugins and tools using this configuration.
 
+> NOTE: Neovim 0.11 not recommended. Paredit (nvim-treesitter-sexp) is disabled for Neovim 0.11 and you may experience other errors & deprecation warnings.
+
 ## Neovim 0.11
 
 For Neovim 0.11, use [Practicalli nvim-astro5](https://github.com/practicalli/nvim-astro5) which supports Neovim 0.11 and is based on AstroNvim v5 template.
 
-> NOTE: Neovim 0.11 not recommended. Paredit (nvim-treesitter-sexp) is disabled for Neovim 0.11 and you may experience other errors & deprecation warnings.
 
 
 ## 🛠️ Installation
